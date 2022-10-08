@@ -103,6 +103,9 @@ $colspan = 16;
     <p>
         회원자료 삭제 시 다른 회원이 기존 회원아이디를 사용하지 못하도록 회원아이디, 이름, 닉네임은 삭제하지 않고 영구 보관합니다.
     </p>
+    <p>
+        권한 ( 1: 비회원, 2: 일반회원, 3: 마이투자회원, 10: 최고관리자 )
+    </p>
 </div>
 
 
@@ -136,7 +139,7 @@ $colspan = 16;
                 </tr>
                 <tr>
                     <th scope="col" id="mb_list_name"><?php echo subject_sort_link('mb_name') ?>이름</a></th>
-                    <th scope="col" id="mb_list_nick"><?php echo subject_sort_link('mb_nick') ?>닉네임</a></th>
+                    <th scope="col" id="mb_list_nick"><?php echo subject_sort_link('mb_nick') ?>회사명</a></th>
                     <th scope="col" id="mb_list_sms"><?php echo subject_sort_link('mb_sms', '', 'desc') ?>SMS수신</a></th>
                     <th scope="col" id="mb_list_adultc"><?php echo subject_sort_link('mb_adult', '', 'desc') ?>성인인증</a></th>
                     <th scope="col" id="mb_list_auth"><?php echo subject_sort_link('mb_intercept_date', '', 'desc') ?>접근차단</a></th>

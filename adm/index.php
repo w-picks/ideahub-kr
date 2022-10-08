@@ -62,7 +62,7 @@ $colspan = 12;
                 <tr>
                     <th scope="col">회원아이디</th>
                     <th scope="col">이름</th>
-                    <th scope="col">닉네임</th>
+                    <th scope="col">회사명</th>
                     <th scope="col">권한</th>
                     <th scope="col">포인트</th>
                     <th scope="col">수신</th>

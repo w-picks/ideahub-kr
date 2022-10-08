@@ -175,14 +175,12 @@ if (G5_IS_MOBILE) {
         <?php 
             $sql = "SELECT mb_no, mb_id, mb_name, mb_nick, mb_level, mb_email FROM g5_member WHERE mb_level = 3 AND mb_memo NOT LIKE '%삭제함%'";
             $result = sql_query($sql); 
-            $name = '';
-            $email = '';
         ?>
         <?php if($board['bo_table'] == 'my_investment') { ?>
             <select name='wr_1' id="myInvestmentSelect" required itemname="대상">
                 <option value=''>선택하세요</option>
                 <?php for ($i = 0; $row = sql_fetch_array($result); $i++) { ?>
-                    <option data-id='<?php echo $row['mb_email'] ?>' value='<?php echo $row['mb_id'] ?>'><?php echo $row['mb_id']." / ".$row['mb_nick'] ?></option>    
+                    <option data-id='<?php echo $row['mb_email'] ?>' value='<?php echo $row['mb_id'] ?>'><?php echo $row['mb_id']." / ".$row['mb_name']." / ".$row['mb_nick'] ?></option>    
                 <?php }?>
             </select>
             <input type="hidden" name="wr_2" value="" id="email_input_val">
