@@ -95,12 +95,8 @@ if ($config['cf_cert_use'] && ($config['cf_cert_simple'] || $config['cf_cert_ipi
             <?php if ($req_nick) { ?>
             <li>
                 <label for="reg_mb_nick" class="sound_only">닉네임 (필수)</label>
-                <span class="frm_info">
-                    공백없이 한글,영문,숫자만 입력 가능 (한글2자, 영문4자 이상)<br>
-                    닉네임을 바꾸시면 앞으로 <?php echo (int)$config['cf_nick_modify'] ?>일 이내에는 변경 할 수 없습니다.
-                </span>
                 <input type="hidden" name="mb_nick_default" value="<?php echo isset($member['mb_nick'])?get_text($member['mb_nick']):''; ?>">
-                <input type="text" name="mb_nick" value="<?php echo isset($member['mb_nick'])?get_text($member['mb_nick']):''; ?>" id="reg_mb_nick" required class="frm_input full_input required nospace" maxlength="20" placeholder="닉네임 (필수)">
+                <input type="text" name="mb_nick" value="<?php echo isset($member['mb_nick'])?get_text($member['mb_nick']):''; ?>" id="reg_mb_nick" required class="frm_input full_input required nospace" maxlength="20" placeholder="회사명 (필수)">
                 <span id="msg_mb_nick"></span>
             </li>
             <?php } ?>
