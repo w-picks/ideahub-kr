@@ -169,7 +169,7 @@ if (G5_IS_MOBILE) {
 
         <!-- 
             2022.08.23 ideahub
-            - 선택한 대상에게만 보이는 마이페이지 게시판 -> select box option 출력
+            - 선택한 대상에게만 보이는 나의 투자 게시판 -> select box option 출력
             - 이메일 추가 작업
         -->
         <?php 
@@ -180,10 +180,11 @@ if (G5_IS_MOBILE) {
             <select name='wr_1' id="myInvestmentSelect" required itemname="대상">
                 <option value=''>선택하세요</option>
                 <?php for ($i = 0; $row = sql_fetch_array($result); $i++) { ?>
-                    <option data-id='<?php echo $row['mb_email'] ?>' value='<?php echo $row['mb_id'] ?>'><?php echo $row['mb_id']." / ".$row['mb_name']." / ".$row['mb_nick'] ?></option>    
+                    <option data-id='<?php echo $row['mb_email'] ?>' data-name='<?php echo $row['mb_nick'] ?>' value='<?php echo $row['mb_id'] ?>'><?php echo $row['mb_id']." / ".$row['mb_name']." / ".$row['mb_nick'] ?></option>    
                 <?php }?>
             </select>
             <input type="hidden" name="wr_2" value="" id="email_input_val">
+            <input type="hidden" name="wr_3" value="" id="company_input_val">
         <?php } ?>
 
         <div class="write_div">
@@ -353,8 +354,9 @@ function fwrite_submit(f)
 }
 
 $("#myInvestmentSelect").on("change",(e)=>{
-    const emailDate = $("#myInvestmentSelect").find("option:selected").data("id");
-
-    $("#email_input_val").val(emailDate);
+    const emailData = $("#myInvestmentSelect").find("option:selected").data("id");
+    const companyData = $("#myInvestmentSelect").find("option:selected").data("name");
+    $("#email_input_val").val(emailData);
+    $("#company_input_val").val(companyData);
 })
 </script>

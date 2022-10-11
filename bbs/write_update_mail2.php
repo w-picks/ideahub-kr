@@ -6,7 +6,7 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<title><?php echo $wr_subject ?> 메일 - 나의 투자</title>
+<title><?php echo $wr_subject ?></title>
 </head>
 
 <body>
@@ -14,7 +14,7 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 <div style="margin:30px auto;width:600px;border:10px solid #f7f7f7">
     <div style="border:1px solid #dedede">
         <h1 style="padding:30px 30px 0;background:#f7f7f7;color:#555;font-size:1.4em">
-            <?php echo $wr_subject ?>
+            메일 - 나의 투자 <?php echo $wr_subject."<br> 수신 : ".$wr_3 ?>
         </h1>
         <span style="display:block;padding:10px 30px 30px;background:#f7f7f7;text-align:right">
             작성자 <?php echo $wr_name ?>
