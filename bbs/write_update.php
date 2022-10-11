@@ -707,7 +707,15 @@ if (!($w == 'u' || $w == 'cu') && $config['cf_email_use'] && $board['bo_use_emai
     include_once(G5_LIB_PATH.'/mailer.lib.php');
 
     ob_start();
-    include_once ('./write_update_mail.php');
+    /**
+     * ideahub 나의투자 email 발송 처리
+     */
+    // include_once ('./write_update_mail.php'); 
+    // if ($board['bo_table'] == 'my_investment'){
+    //     include_once ('./write_update_mail2.php');
+    // } else {
+        include_once ('./write_update_mail.php');
+    // }
     $content = ob_get_contents();
     ob_end_clean();
 
@@ -726,6 +734,11 @@ if (!($w == 'u' || $w == 'cu') && $config['cf_email_use'] && $board['bo_use_emai
 
         $array_email[] = $wr['wr_email'];
     }
+
+    // if ($board['bo_table'] == 'my_investment'){
+    //     $wr['wr_email'] = $wr_2;
+    //     $array_email[] = $wr['wr_email'];
+    // }
 
     // 옵션에 메일받기가 체크되어 있고, 게시자의 메일이 있다면
     if (isset($wr['wr_option']) && isset($wr['wr_email'])) {

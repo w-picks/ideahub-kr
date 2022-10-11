@@ -26,12 +26,19 @@ function mailer($fname, $fmail, $to, $subject, $content, $type=0, $file="", $cc=
 
     try {
         $mail = new PHPMailer(); // defaults to using php "mail()"
-        if (defined('G5_SMTP') && G5_SMTP) {
+        /*if (defined('G5_SMTP') && G5_SMTP) {
             $mail->IsSMTP(); // telling the class to use SMTP
             $mail->Host = G5_SMTP; // SMTP server
             if(defined('G5_SMTP_PORT') && G5_SMTP_PORT)
                 $mail->Port = G5_SMTP_PORT;
-        }
+        }*/
+        $mail->IsSMTP();
+        $mail->SMTPSecure = "ssl";
+        $mail->SMTPAuth = true;
+        $mail->Host = "smtp.gmail.com";
+        $mail->Port = 465;
+        $mail->Username = "이메일 주소 입력";
+        $mail->Password = "이메일 주소 비밀번호";
         $mail->CharSet = 'UTF-8';
         $mail->From = $fmail;
         $mail->FromName = $fname;
