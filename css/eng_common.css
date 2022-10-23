@@ -1,0 +1,22 @@
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+* {
+  margin: 0;
+  padding: 0;
+  color: inherit;
+}
+a {
+  text-decoration: none;
+}
+button {
+  background: none;
+  border: none;
+}
+ul,
+ol,
+li {
+  list-style: none;
+}
