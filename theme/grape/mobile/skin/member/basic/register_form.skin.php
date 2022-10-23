@@ -9,6 +9,11 @@ if ($config['cf_cert_use'] && ($config['cf_cert_simple'] || $config['cf_cert_ipi
 ?>
 
 <div class="register">
+    <?php if($w == ""){ ?>
+        <h1>회원가입</h1>
+    <?php } else  { ?>
+        <h1>내 정보관리</h1>
+    <?php } ?>
     <form name="fregisterform" id="fregisterform" action="<?php echo $register_action_url ?>" onsubmit="return fregisterform_submit(this);" method="post" enctype="multipart/form-data" autocomplete="off">
     <input type="hidden" name="w" value="<?php echo $w ?>">
     <input type="hidden" name="url" value="<?php echo $urlencode ?>">

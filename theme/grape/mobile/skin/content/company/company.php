@@ -56,11 +56,27 @@
             </div>
             <div class="scroll-trans-delay-500 scroll-trans">
                 <img src="<?php echo G5_IMG_URL ?>/ico_our_mission_heart.png">
-                <b><span>300</span>건</b>
+                <b><span>3,000</span>억원</b>
                 <p>방대한 특허 포트폴리오를 기반으로<br>
                 향후 5년간 예상 수입 3,000억원</p>
             </div>
         </div>
+    </article>
+</section>
+<section id="our_portfolio">
+    <article>
+        <h3 class="scroll-trans">Our Portfolio</h3>
+        <p class="scroll-trans">아이디어허브는 저평가된 특허를 High Quality의 IP로 확대하여 High valued IP Portfolio를 완성합니다.</p>
+        <ul>
+            <li class="scroll-trans">
+                <div class="img"></div>
+                <p>보유 특허 건수 (나라별)</p>
+            </li>
+            <li class="scroll-trans scroll-trans-delay-300">
+                <div class="img"></div>
+                <p>보유 특허 건수 (기술별)</p>
+            </li>
+        </ul>
     </article>
 </section>
 <section id="our_history">

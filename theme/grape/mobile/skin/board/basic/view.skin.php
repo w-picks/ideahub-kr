@@ -285,7 +285,9 @@ if (G5_IS_MOBILE) {
                     </h2>
                     <div class="amount_container">
                         <p class="amount"><em><?php echo $view['wr_4'] ?></em>원</p>
+                        <?php if($success_tag == 1){ ?>
                         <span class="amount_state">투자완료</span>
+                        <?php } ?>
                     </div>
                     <div class="target">
                         <p class="target_amount"><span>목표금액</span><em><?php echo $view['wr_3'] ?></em>원</p>

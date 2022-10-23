@@ -355,6 +355,7 @@ filter: blur(3px);}
     padding:11px;
     font-size: 16px;
     color: #506285;
+    cursor: pointer;
 }
 #invest_detail .tab_container .tabs li.on{
     color:#040810;

@@ -20,10 +20,12 @@ if (G5_IS_MOBILE) {
 } 
 ?>
 
-<?php if($board['bo_table'] != 'investment') { ?>
-    <div id="notice_news">
-<?php }else { ?>
+<?php if($board['bo_table'] == 'investment'){ ?>
     <div id="investment">
+<?php } else if($board['bo_table'] == 'my_investment'){?>
+    <div id="my_investment">
+<?php } else{ ?>
+    <div id="notice_news">
 <?php } ?>
 <!-- <div id="nav">
     <div class="nav_wr"><a href="<?php echo G5_URL ?>"><i class="fa fa-home"></i> </a><span><?php echo ($board['bo_mobile_subject'] ? $board['bo_mobile_subject'] : $board['bo_subject']); ?></span></div>
@@ -54,8 +56,8 @@ if (G5_IS_MOBILE) {
 <?php if($board['bo_table'] == "my_investment") {?>
     <div class="my_invest_tab_wrap">
         <ul class="my_invest_tab">
-            <li class="on" onclick="myTabHandle(0, this)">공지</li>
-            <li onclick="myTabHandle(1, this)">투자한 프로젝트</li>
+            <li class="on" onclick="myTabHandle(0, this)">투자한 프로젝트</li>
+            <li onclick="myTabHandle(1, this)">공지</li>
         </ul>
     </div>
 <?php } ?>
@@ -63,45 +65,49 @@ if (G5_IS_MOBILE) {
 
 
 <?php if($board['bo_table']) { ?>
-<div id="bo_list">
+    <?php if($board['bo_table'] == "my_investment") {?>
+        <div id="bo_list" style="display:none">
+        <?php } else { ?>
+            <div id="bo_list">
+    <?php } ?>
     <?php if($board['bo_table'] != "my_investment") { ?>
     <article class="invest_article">
-    <fieldset id="bo_sch">
-        <legend>게시물 검색</legend>
+        <fieldset id="bo_sch">
+            <legend>게시물 검색</legend>
 
-        <form name="fsearch" method="get">
-        <input type="hidden" name="bo_table" value="<?php echo $bo_table ?>">
-        <input type="hidden" name="sca" value="<?php echo $sca ?>">
-        <input type="hidden" name="sop" value="and">
-        <label for="sfl" class="sound_only">검색대상</label>
-        <select name="sfl" id="sfl">
-            <option value="wr_subject"<?php echo get_selected($sfl, 'wr_subject', true); ?>>제목</option>
-            <option value="wr_content"<?php echo get_selected($sfl, 'wr_content'); ?>>내용</option>
-            <option value="wr_subject||wr_content"<?php echo get_selected($sfl, 'wr_subject||wr_content'); ?>>제목+내용</option>
-            <!-- <option value="mb_id,1"<?php echo get_selected($sfl, 'mb_id,1'); ?>>회원아이디</option>
-            <option value="mb_id,0"<?php echo get_selected($sfl, 'mb_id,0'); ?>>회원아이디(코)</option>
-            <option value="wr_name,1"<?php echo get_selected($sfl, 'wr_name,1'); ?>>글쓴이</option>
-            <option value="wr_name,0"<?php echo get_selected($sfl, 'wr_name,0'); ?>>글쓴이(코)</option> -->
-        </select>
-        <div class="input_wrap">
-        <input name="stx" value="<?php echo stripslashes($stx) ?>" placeholder="검색어를 입력해주세요." required id="stx" class="sch_input" size="15" maxlength="20">
-        <button type="submit" value="검색" class="sch_btn"><img src="<?php echo G5_IMG_URL ?>/ico_search.svg"></button>
+            <form name="fsearch" method="get">
+            <input type="hidden" name="bo_table" value="<?php echo $bo_table ?>">
+            <input type="hidden" name="sca" value="<?php echo $sca ?>">
+            <input type="hidden" name="sop" value="and">
+            <label for="sfl" class="sound_only">검색대상</label>
+            <select name="sfl" id="sfl">
+                <option value="wr_subject"<?php echo get_selected($sfl, 'wr_subject', true); ?>>제목</option>
+                <option value="wr_content"<?php echo get_selected($sfl, 'wr_content'); ?>>내용</option>
+                <option value="wr_subject||wr_content"<?php echo get_selected($sfl, 'wr_subject||wr_content'); ?>>제목+내용</option>
+                <!-- <option value="mb_id,1"<?php echo get_selected($sfl, 'mb_id,1'); ?>>회원아이디</option>
+                <option value="mb_id,0"<?php echo get_selected($sfl, 'mb_id,0'); ?>>회원아이디(코)</option>
+                <option value="wr_name,1"<?php echo get_selected($sfl, 'wr_name,1'); ?>>글쓴이</option>
+                <option value="wr_name,0"<?php echo get_selected($sfl, 'wr_name,0'); ?>>글쓴이(코)</option> -->
+            </select>
+            <div class="input_wrap">
+            <input name="stx" value="<?php echo stripslashes($stx) ?>" placeholder="검색어를 입력해주세요." required id="stx" class="sch_input" size="15" maxlength="20">
+            <button type="submit" value="검색" class="sch_btn"><img src="<?php echo G5_IMG_URL ?>/ico_search.svg"></button>
+            </div>
+            </form>
+        </fieldset>
+
+        
+        <div id="bo_list_total" class="pc_view">
+            <span>총 <em><?php echo number_format($total_count) ?></em>
+            <?php if($board['bo_table'] == 'investment') { ?>
+                개의 프로젝트가 있습니다.
+                <?php } else { ?>
+                    건
+                    <?php } ?>
+            </span>
         </div>
-        </form>
-    </fieldset>
-
-    
-<div id="bo_list_total" class="pc_view">
-    <span>총 <em><?php echo number_format($total_count) ?></em>
-    <?php if($board['bo_table'] == 'investment') { ?>
-        개의 프로젝트가 있습니다.
-        <?php } else { ?>
-            건
-            <?php } ?>
-</span>
-</div>
-</article>
-<?php } ?>
+    </article>
+    <?php } ?>
 
     <form name="fboardlist" id="fboardlist" action="<?php echo G5_BBS_URL; ?>/board_list_update.php" onsubmit="return fboardlist_submit(this);" method="post">
     <input type="hidden" name="bo_table" value="<?php echo $bo_table ?>">
@@ -126,6 +132,7 @@ if (G5_IS_MOBILE) {
                 // 투자하기 리스트 ideahub
                 if($_GET['bo_table'] == 'investment') {
                     ?>
+                    
                     <?php
                         $success_tag = $list[$i]['wr_3'] < $list[$i]['wr_4'];
                         $now = strtotime(date("Y-m-d"));
@@ -355,6 +362,76 @@ if (G5_IS_MOBILE) {
     
 
     <!-- 게시판 목록 시작 -->
+    <?php if($board['bo_table'] == "my_investment") {?>
+
+    <div id="invest_project">
+        <ul>
+            <li>
+                <p class="invest_project_el">
+                    2022년<img src="<?php echo G5_IMG_URL ?>/invest_project_arrow_ico.svg">
+                </p>
+                <ul class="quarter">
+                    <li>
+                        <p class="quarter_el">
+                            <!-- <img src="<?php echo G5_IMG_URL ?>/quarter_ico_plust.svg"> -->
+                            1분기
+                        </p>
+                        <ul class="invest_file">
+                            <li>
+                                <p class="invest_file_el">
+                                    <img src="<?php echo G5_IMG_URL ?>/invest_file_ico.svg">
+                                    <a href="/">HEVC - Disclosure of Royalty Information - IDEAHUB.pdf</a>
+                                    <img src="<?php echo G5_IMG_URL ?>/invest_download_ico.svg">
+                                </p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p class="quarter_el">
+                            <!-- <img src="<?php echo G5_IMG_URL ?>/quarter_ico_plust.svg"> -->
+                            2분기
+                        </p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p class="invest_project_el">
+                    2021년<img src="<?php echo G5_IMG_URL ?>/invest_project_arrow_ico.svg">
+                </p>
+                <ul class="quarter">
+                    <li>
+                        <p class="quarter_el">
+                            <!-- <img src="<?php echo G5_IMG_URL ?>/quarter_ico_plust.svg"> -->
+                            1분기
+                        </p>
+                        <ul class="invest_file">
+                            <li>
+                                <p class="invest_file_el">
+                                    <img src="<?php echo G5_IMG_URL ?>/invest_file_ico.svg">
+                                    <a href="/">HEVC - Disclosure of Royalty Information - IDEAHUB.pdf</a>
+                                    <img src="<?php echo G5_IMG_URL ?>/invest_download_ico.svg">
+                                </p>
+                            </li>
+                            <li>
+                                <p class="invest_file_el">
+                                    <img src="<?php echo G5_IMG_URL ?>/invest_file_ico.svg">
+                                    <a href="/">HEVC - Disclosure of Royalty Information - IDEAHUB.pdf</a>
+                                    <img src="<?php echo G5_IMG_URL ?>/invest_download_ico.svg">
+                                </p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p class="quarter_el">
+                            <!-- <img src="<?php echo G5_IMG_URL ?>/quarter_ico_plust.svg"> -->
+                            2분기
+                        </p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <?php } ?>
 </div>
 <?php } else { ?>
     <!-- 투자하기 게시판 -->
@@ -508,16 +585,40 @@ function select_copy(sw) {
             
         }
 
+        // $("#bo_list").hide();
         const myTabHandle = (num, el) => {
-            console.log(num)
+            $(".my_invest_tab li").removeClass("on");
+            el.classList.add("on")
+
             if(num == 0){
                 $("#bo_list").hide();
+                $("#invest_project").show();
             }else{
                 $("#bo_list").show();
+                $("#invest_project").hide();
 
             }
         }
 
+    const investProject = document.querySelector("#invest_project");
+    if(investProject){
+        // $("#invest_project > ul > li").on("click", function(){
+        //     $(this).addClass("on").find(".quarter").slideDown();
+        //     $(this).siblings().removeClass("on").find(".quarter").slideUp();
+        // })
+
+        // $(".quarter > li").on("click", function(){
+        //     $(this).find(".quarter_el").toggleClass("on")
+        //     $(this).find(".invest_file").slideToggle();
+        // })
+        $("#invest_project > ul > li > p").on("click",function(){
+            $(this).toggleClass("on").siblings(".quarter").slideToggle();
+        })
+
+        $(".quarter_el").on("click",function(){
+            $(this).toggleClass("on").siblings(".invest_file").slideToggle();
+        })
+    }
 
     
 </script>

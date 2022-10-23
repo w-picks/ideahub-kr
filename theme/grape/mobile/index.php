@@ -8,8 +8,8 @@ include_once(G5_THEME_MOBILE_PATH.'/head.php');
 <div id="main_wrapper">
     <section id="main_vid">
         <article>
-            <h2 class="scroll-trans">세계 최초의<br>특허 투자 플랫폼</h2>
-            <p class="scroll-trans">누구나 기술에 투자할 수 있는 기회,<br>아이디어허브를 통해 특허권에 투자하세요.</p>
+            <h2>세계 최초의<br>특허 투자 플랫폼</h2>
+            <p>누구나 기술에 투자할 수 있는 기회,<br>아이디어허브를 통해 특허권에 투자하세요.</p>
         </article>
     </section>
     <section id="section1">
@@ -81,12 +81,16 @@ include_once(G5_THEME_MOBILE_PATH.'/head.php');
         </div>
         <div class="project_slide_bg swiper">
             <div class="swiper-wrapper">
-                <div class="swiper-slide slide_1">
+                <?php $sql = " select * from g5_write_investment where wr_is_comment = 0 order by wr_num desc limit 0, 3 ";        
+            $result = sql_query($sql);
+            for ($i=0; $row = sql_fetch_array($result); $i++) {?>
+                <div class="swiper-slide slide_<?php echo $i+1 ?>">
                     <div class="slide_content_bg"></div>
                 </div>
-                <div class="swiper-slide slide_2">
+                <?php } ?>
+                <!-- <div class="swiper-slide slide_2">
                     <div class="slide_content_bg"></div>
-                </div>
+                </div> -->
             </div>
             <div class="swiper-button-prev swiper-btn"></div>
             <div class="swiper-button-next swiper-btn"></div>
@@ -106,27 +110,27 @@ include_once(G5_THEME_MOBILE_PATH.'/head.php');
         <article class="img_container scroll-trans scroll-trans-delay-300">
             <div class="left">
                 <div class="img_box sm">
-                    <p class="project_name">프로젝트 이름</p>
+                    <img src="<?php echo G5_IMG_URL ?>/investment_status_1.png">
                 </div>
                 <div class="img_box lg">
-                    <p class="project_name">프로젝트 이름</p>
+                    <img src="<?php echo G5_IMG_URL ?>/investment_status_2.png">
                 </div>
                 <div class="img_box sm">
-                    <p class="project_name">프로젝트 이름</p>
+                    <img src="<?php echo G5_IMG_URL ?>/investment_status_3.png">
                 </div>
-                <div class="img_box lg">
+                <!-- <div class="img_box lg">
                     <p class="project_name">프로젝트 이름</p>
-                </div>
+                </div> -->
             </div>
             <div class="right">
                 <div class="img_box lg">
-                    <p class="project_name">프로젝트 이름</p>
+                    <img src="<?php echo G5_IMG_URL ?>/investment_status_4.png">
                 </div>
                 <div class="img_box sm">
-                    <p class="project_name">프로젝트 이름</p>
+                    <img src="<?php echo G5_IMG_URL ?>/investment_status_5.png">
                 </div>
                 <div class="img_box lg">
-                    <p class="project_name">프로젝트 이름</p>
+                    <img src="<?php echo G5_IMG_URL ?>/investment_status_6.png">
                 </div>
             </div>
         </article>
@@ -172,9 +176,9 @@ include_once(G5_THEME_MOBILE_PATH.'/head.php');
 echo latest('theme/review', 'broadcast', 5, 20);
 ?>
 
-<section id="section7" class="kakao_plus_banner">
-<img src="<?php echo G5_IMG_URL ?>/kakao_plus_banner.png" class="pc">
-<img src="<?php echo G5_IMG_URL ?>/kakao_plus_banner_mo.png" class="mo">
+<section id="section7" class="direct_banner">
+        <p>아이디어 허브에 대해 궁금한 점이 있으신가요?</p>
+        <button>1:1문의<img src="<?php echo G5_IMG_URL ?>/ico_direct_faq.svg"></button>
 </section>
 
 <script>

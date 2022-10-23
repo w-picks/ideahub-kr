@@ -6,7 +6,7 @@ add_stylesheet('<link rel="stylesheet" href="'.$member_skin_url.'/style.css">', 
 ?>
 
 <div class="mbskin">
-
+<h1>회원가입</h1>
     <?php
     // 소셜로그인 사용시 소셜로그인 버튼
     @include_once(get_social_skin_path().'/social_register.skin.php');
