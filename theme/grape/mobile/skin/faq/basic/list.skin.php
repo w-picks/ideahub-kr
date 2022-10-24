@@ -141,4 +141,23 @@ function faq_open(el)
 
     return false;
 }
+
+        $("#faq_sch .btn_submit").on("click", (e)=>{
+            if(window.innerWidth < 969){
+                if(!$("#faq_sch").hasClass("on")){
+                    e.preventDefault();
+                    $("#faq_sch").addClass("on")
+                    // $("#faq_con").css({marginTop:"91px"})
+                }
+            }
+        })
+        
+        $("#faq_sch").on("click", (e)=>{
+            if(window.innerWidth < 969){
+            if(e.target.id === "faq_sch"){
+                $("#faq_sch").removeClass("on");
+                // $("#faq_con").css({marginTop:"64px"})
+            }
+        }
+        })
 </script>

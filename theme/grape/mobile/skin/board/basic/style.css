@@ -94,6 +94,7 @@ filter: blur(3px);}
     height:226px;
     display: flex;
     margin-bottom:20px;
+    overflow: hidden;
 }
 #investment .board_list .project_list > li .img_wrap{
     width:306px;
@@ -571,7 +572,7 @@ white-space: nowrap;overflow-x: auto;
 .board_list .bo_info img{margin-right:6px;}
 .board_list .bo_info i{margin-left:5px}
 
-.bo_fx {margin:20px 0}
+.bo_fx { margin:20px auto; width:100%;max-width:1020px}
 .bo_fx:after {display:block;visibility:hidden;clear:both;content:""} 
 .bo_fx li{display:inline-block;}
 .btn_bo_adm{float:left}
@@ -744,7 +745,7 @@ white-space: nowrap;overflow-x: auto;
         width:146px;
     }
     #investment .board_list .project_list > li .project_content{
-        padding:0 15px 0 8px;
+        padding:3px 15px 0 8px;
     }
     #investment .board_list .bo_subject{
         font-size: 15px;
@@ -983,7 +984,7 @@ box-shadow: 1px 2px 8px #e2e4f1}
 #bo_v_link span {font-size:0.91em}
 .bo_v_link_cnt {font-size:0.92em}
 
-#bo_v_top {margin:20px 0;clear:both}
+#bo_v_top {margin:20px auto;clear:both; width:1020px;}
 #bo_v_top:after {display:block;visibility:hidden;clear:both;content:""}
 #bo_v_top h2 {position:absolute;font-size:0;text-indent:-9999em;line-height:0;overflow:hidden}
 #bo_v_top ul {margin:0;padding:0;list-style:none}
@@ -1177,5 +1178,9 @@ box-shadow: 2px 2px 6px #f3f3f3}
     }
     .bo_v_nb li a p{
         padding-left:11px;
+    }
+    #bo_v_top{
+        width:100%;
+        padding:0 10px;
     }
 }

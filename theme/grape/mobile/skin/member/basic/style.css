@@ -1072,3 +1072,66 @@
   -moz-box-shadow: 0 0 5px rgba(50, 50, 50, 0.2);
   box-shadow: 0 1px 5px rgba(50, 50, 50, 0.2);
 }
+@media (max-width: 969px) {
+  .register h1 {
+    font-size: 25px;
+    margin-top: 36px;
+    padding-left: 23px;
+    box-sizing: border-box;
+  }
+  #mb_login {
+    width: 100%;
+    margin: auto;
+    padding: 0;
+    height: 100vh;
+  }
+  #mb_login h1 {
+    font-size: 25px;
+    margin: 0;
+    padding-top: 36px;
+    padding-left: 23px;
+    box-sizing: border-box;
+    border: none;
+  }
+  .mbskin h1 {
+    font-size: 25px;
+    margin: 0;
+    padding-top: 36px;
+    padding-left: 16px;
+    box-sizing: border-box;
+    border: none;
+  }
+  #flogin {
+    width: 100%;
+    border: none;
+  }
+  #mb_login #login_frm {
+    border: none;
+    padding: 0 23px;
+  }
+  #flogin .label {
+    margin-bottom: 5px;
+  }
+  #mb_login .btn_submit {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-radius: 0;
+    height: 58px;
+    margin: 0;
+  }
+  #mb_login .mb_login_join {
+    margin-top: 65px;
+    margin-bottom: 100px;
+  }
+  .mbskin .btn_submit {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-radius: 0;
+    height: 58px;
+    margin: 0;
+  }
+}

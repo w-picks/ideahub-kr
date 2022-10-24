@@ -251,9 +251,29 @@ if (G5_IS_MOBILE) {
                     <img src="<?php echo $view['file'][0][path]."/".$view['file'][0][file] ?>">
                 </div>
                 <ul class="tags_mo">
-                    <li><?php echo $view['wr_6'] ?></li>
+                    <li>#이자율 <?php echo $view['wr_5'] ?>%</li>
                     <!-- <li>#채권형</li>
                     <li>#일반화사체</li> -->
+                    <?php 
+                if($view['wr_9']) {
+                    ?>
+                    <li>
+                    <?php 
+                        echo $view['wr_9']
+                    ?>
+                    </li>
+                    <?php 
+                }
+                if($view['wr_10']) {
+                    ?>
+                    <li>
+                    <?php 
+                        echo $view['wr_10']
+                    ?>
+                    </li>
+                    <?php 
+                }
+                ?>
                 </ul>
                 <div class="detail_content">
                     <h2 class="title">
@@ -328,7 +348,7 @@ if (G5_IS_MOBILE) {
         </article>
         </div>
     </div>
-
+    <?php if($is_admin){ ?>
     <div id="bo_v_top">
         <ul class="bo_v_left">
             <?php if ($update_href) { ?><li><a href="<?php echo $update_href ?>" class="btn_b01 btn_m">수정</a></li><?php } ?>
@@ -345,6 +365,7 @@ if (G5_IS_MOBILE) {
 
         </div>
     </div>
+    <?php } ?>
 <?php } ?>
 
 <script>
@@ -440,6 +461,6 @@ if(investDetail){
     $(".amount em").html(Number(amount).toLocaleString('ko-KR'))
     $(".target_amount em").html(Number(tagetAmount).toLocaleString('ko-KR'))
 }
-
+   
 
 </script>

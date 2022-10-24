@@ -609,7 +609,7 @@ ul {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: right;
-  color: #fff;
+  color: #040810;
 }
 #main_vid article h2 {
   font-size: 55px;
@@ -697,6 +697,9 @@ ul {
 .project_slide_content .slide_2 ul li {
   box-shadow: 0px 4px 20px rgba(34, 108, 113, 0.5);
 }
+.project_slide_content .slide_3 ul li {
+  box-shadow: 0px 4px 20px rgba(34, 108, 113, 0.5);
+}
 .project_slide_content .slide_2 .default_btn:hover > div {
   color: #53abac;
 }
@@ -736,6 +739,9 @@ ul {
 .project_slide_bg .slide_2 {
   background: url(/img/project_sec_bg_2.png) no-repeat center / cover;
 }
+.project_slide_bg .slide_3 {
+  background: url(/img/project_sec_bg_3.png) no-repeat center / cover;
+}
 .project_slide_bg .slide_content_bg {
   width: 1252px;
   height: 717px;
@@ -746,6 +752,9 @@ ul {
 }
 .project_slide_bg .slide_2 .slide_content_bg {
   background: radial-gradient(92.01% 456.46% at 0% 50%, rgba(46, 169, 176, 0.8) 12.98%, rgba(110, 218, 147, 0.7) 100%);
+}
+.project_slide_bg .slide_3 .slide_content_bg {
+  background: radial-gradient(92.01% 456.46% at 0% 50%, rgba(46, 102, 211, 0.8) 12.98%, rgba(75, 175, 231, 0.7) 100%);
 }
 .project_slide_bg .swiper-btn {
   width: 62px;
@@ -817,9 +826,11 @@ ul {
 .invest_status .img_container > div .img_box {
   width: 287px;
   border-radius: 26px;
-  background: #ddd;
   position: relative;
   margin-bottom: 20px;
+}
+.invest_status .img_container > div .img_box img {
+  width: 100%;
 }
 .invest_status .img_container > div .img_box.sm {
   height: 222px;
@@ -1538,6 +1549,9 @@ ul {
   margin: 0;
   padding: 0;
 }
+#bo_w .bo_w_flie .frm_file {
+  padding-left: 0 !important;
+}
 .direct_inquiry ul li.all_chk_option {
   margin-top: 27px;
 }
@@ -2047,9 +2061,7 @@ ul {
   .invest_status .img_container > div.left {
     margin-top: 70px;
   }
-  .invest_status .img_container > div.left .img_box:last-of-type {
-    display: none;
-  }
+
   .invest_status .img_container > div .img_box {
     width: 100%;
   }
@@ -2504,6 +2516,43 @@ ul {
     width: 100%;
     font-size: 18px;
     border-radius: 0;
+  }
+  #my_investment {
+    width: 100%;
+    margin-top: 36px;
+  }
+  #my_investment h1 {
+    font-size: 25px;
+    margin-bottom: 40px;
+    text-align: left;
+    padding-left: 23px;
+  }
+  .my_invest_tab li {
+    padding: 11px 17px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .my_invest_tab li.on {
+    font-weight: 700;
+  }
+  .invest_project_el {
+    padding-left: 22px;
+    padding-right: 32px;
+    height: 58px;
+    font-size: 15px;
+  }
+  .invest_project_el img {
+    width: 11px;
+  }
+  .quarter_el {
+    height: 58px;
+    padding-left: 51px;
+    background-size: 10px auto;
+    background-position: 34px center;
+    font-size: 14px;
+  }
+  .invest_file_el {
+    padding-left: 27px;
   }
 }
 
