@@ -1,5 +1,6 @@
 <link rel="stylesheet" href="/eng/css/reset.css">
 <link rel="stylesheet" href="/eng/css/common.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 
 <header>
     <article>

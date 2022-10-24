@@ -593,6 +593,15 @@ ul {
   background: #ddd;
   position: relative;
 }
+
+#main_vid video {
+  position: absolute;
+  height: auto;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 #main_vid article {
   position: absolute;
   width: 846px;

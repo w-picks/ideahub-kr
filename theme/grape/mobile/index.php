@@ -7,6 +7,9 @@ include_once(G5_THEME_MOBILE_PATH.'/head.php');
 
 <div id="main_wrapper">
     <section id="main_vid">
+        <video muted autoplay loop>
+            <source src="<?php echo G5_IMG_URL ?>/04 istockphoto-1299129888-640_adpp_is.mp4" type="video/mp4"></source>
+        </video>
         <article>
             <h2>세계 최초의<br>특허 투자 플랫폼</h2>
             <p>누구나 기술에 투자할 수 있는 기회,<br>아이디어허브를 통해 특허권에 투자하세요.</p>

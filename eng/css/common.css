@@ -114,6 +114,7 @@ body {
   padding: 14px 0px;
   margin: 0 28px;
   box-sizing: border-box;
+  cursor: pointer;
 }
 .detail_tab li.on {
   color: #040810;
@@ -320,6 +321,12 @@ body {
 /* about */
 .detail_content {
 }
+.detail_content > div {
+  display: none;
+}
+.detail_content > div.on {
+  display: block;
+}
 .vision {
   text-align: center;
   margin-top: 70px;
@@ -332,4 +339,121 @@ body {
 .detail_content .sub_txt {
   font-size: 15px;
   margin-bottom: 100px;
+}
+
+.leader .leader_noti,
+.leader .leader_email {
+  display: none;
+}
+.leader ul {
+  width: 1020px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: auto;
+  margin-top: 62px;
+}
+.leader ul li {
+  width: 220px;
+  border: 1px solid #e6ebf5;
+  margin-bottom: 47px;
+  cursor: pointer;
+}
+.leader ul li .thum {
+  box-sizing: border-box;
+}
+.leader ul li .thum img {
+  width: 100%;
+}
+.leader ul li .thum .rank {
+  padding-top: 16px;
+  font-size: 13px;
+  color: #506285;
+  padding-left: 12px;
+}
+.leader ul li .thum .leader_name {
+  font-size: 17px;
+  margin-top: 4px;
+  padding-left: 12px;
+  padding-bottom: 29px;
+}
+.leader_pop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99999;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+.leader_pop .pop_inner {
+  display: flex;
+  background: #fff;
+  width: 902px;
+  align-items: center;
+}
+.leader_pop .pop_inner > img {
+  width: 350px;
+  height: auto;
+  flex-shrink: 0;
+}
+.leader_pop .pop_inner .pop_con {
+  padding: 60px 43px;
+  padding-right: 90px;
+  box-sizing: border-box;
+  position: relative;
+}
+.leader_pop .pop_inner .pop_con .close {
+  padding: 27px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.leader_pop .pop_inner .pop_con .pop_rank {
+  font-size: 13px;
+  color: #2d72db;
+  margin-bottom: 6px;
+}
+.leader_pop .pop_inner .pop_con .pop_name {
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+.leader_pop .pop_inner .pop_con .pop_detail {
+  font-size: 13px;
+  color: #506285;
+}
+.leader_pop .pop_inner .pop_con .pop_email {
+  font-size: 13px;
+  margin-top: 57px;
+}
+
+.partner article {
+  width: 1020px;
+  margin: auto;
+  margin-bottom: 100px;
+}
+.partner article p {
+  font-size: 15px;
+  margin-top: 58px;
+  margin-bottom: 24px;
+}
+.partner article ul {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.partner article ul li {
+  width: 155px;
+  height: 63px;
+  border: 1px solid #c1cbe0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 14px;
+}
+.partner article ul li img {
 }
