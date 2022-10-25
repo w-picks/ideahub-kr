@@ -19,10 +19,14 @@
     <article class="detail_content">
         <!-- vision -->
         <div class="vision on">
-        <p class="txt_blue">IDEAHUB operate as an Intellectual Property “hub” for bringing<br>significant value to patents, trademarks and copyrights.</p>
-        <p class="sub_txt">An “IDEA” is constantly evolving during its journey to becoming a valuable IP asset.<br>
-        To maximize the value of IP, connectivity and collaboration to and other IPs, companies and <br>professionals are vital. IDEAHUB’s mission is to be a connecting hub between IDEAs and industry.</p>
-        <img src="../images/vision_map.png">
+            <p class="txt_blue">IDEAHUB operate as an Intellectual Property “hub” for bringing<br>significant value to patents, trademarks and copyrights.</p>
+            <div class="detail_tit_banner">
+                <img src="../images/vision_tit_bn.png" class="pc_img">
+                <img src="../images/vision_tit_bn_mo.png" class="mo_img">
+            </div>
+            <p class="sub_txt">An “IDEA” is constantly evolving during its journey to becoming a valuable IP asset.<br>
+            To maximize the value of IP, connectivity and collaboration to and other IPs, companies and <br>professionals are vital. IDEAHUB’s mission is to be a connecting hub between IDEAs and industry.</p>
+            <img src="../images/vision_map.png">
         </div>
         <!-- leadershipTeam -->
         <div class="leader">
@@ -194,15 +198,17 @@
                 </div>
             </article>
         </div>
+        <div class="portfolio">
+            <p class="txt_blue">
+            Ideahub continues to acquire patents and provides <br>licensing service to various innovators.
+            </p>
+            <div class="detail_tit_banner">
+                <img src="../images/portfolio_tit_bn.png">
+            </div>
+        </div>
     </article>
 </div>
 <script>
-    $(".detail_tab li").on("click", function(){
-        let ind = $(this).index();
-        $(this).addClass("on").siblings().removeClass("on")
-        $(".detail_content > div").eq(ind).addClass("on").siblings().removeClass("on")
-    })
-
     $(".leader_pop .close").on("click", function(){
         $(".leader_pop").fadeOut();
     })
