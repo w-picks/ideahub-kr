@@ -26,7 +26,7 @@
                     <a href="/eng/licensing">Licensing Platform</a>
                 </li>
                 <li>
-                    <a href="/eng/news">News & Events</a>
+                    <a href="/bbs/board.php?bo_table=broadcast_eng">News & Events</a>
                 </li>
                 <li>
                     <a href="/eng/contact">Contect</a>
