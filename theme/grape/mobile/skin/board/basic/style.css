@@ -918,6 +918,9 @@ white-space: nowrap;overflow-x: auto;
     width:1020px;
     margin:auto;
 }
+#bo_v header{
+    display: none;
+}
 #bo_v_table {padding: 10px;color:#999;font-size:0.9em;font-weight:bold}
 .bo_v_cate{color:#ea185f}
 .bo_v_tit{
@@ -1147,6 +1150,136 @@ box-shadow: 2px 2px 6px #f3f3f3}
 #bo_w .bo_w_flie .file_wr{border:1px solid #ccc;background:#fff;color:#000;vertical-align:middle;border-radius:3px;padding:5px;height:40px;margin:0}
 #bo_w .bo_w_flie .frm_input{margin:5px 0 0 }
 .write_div{margin:20px 0;text-align:right}
+
+.lt_review {
+    background: rgba(240, 245, 255, 0.5);
+    padding-top: 107px;
+    padding-bottom: 100px;
+  }
+  .lt_review article {
+    width: 1140px;
+    margin: auto;
+  }
+  .lt_review .title_wrap {
+    margin-bottom: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .lt_review .title_wrap h2 {
+    font-size: 40px;
+    color: #040810;
+  }
+  .lt_review .title_wrap button {
+    height: max-content;
+  }
+  .lt_review .lt_rv_wr {
+  }
+  .lt_review .lt_rv_wr ul {
+  }
+  .lt_review .lt_rv_wr ul li {
+    padding: 26px 23px 26px 30px;
+    border-bottom: 1px solid #c1cbe0;
+    display: flex;
+  }
+  .lt_review .lt_rv_wr ul li:last-of-type {
+    border-bottom: none;
+  }
+  
+  .lt_review .lt_rv_wr ul li .lt_wr {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    width: 100%;
+  }
+  .lt_review .lt_rv_wr ul li .lt_wr .tag {
+    display: block;
+    font-size: 16px;
+    color: #2d72db;
+    font-weight: 700;
+    width: max-content;
+    min-width: 148px;
+  }
+  .lt_review .lt_rv_wr ul li .lt_wr .content {
+    width: 822px;
+  }
+  .lt_review .lt_rv_wr ul li .lt_wr .content .content_tit {
+    display: flex;
+    align-items: center;
+  }
+  .lt_review .lt_rv_wr ul li .lt_wr .content .content_tit .lt_date {
+    display: none;
+  }
+  .lt_review .lt_rv_wr ul li .lt_wr .content .content_tit > div {
+    width: 100%;
+  }
+  .lt_review .lt_rv_wr ul li .lt_wr .content .content_tit strong {
+    font-size: 20px;
+    font-weight: normal;
+  }
+  .lt_review .lt_rv_wr ul li .lt_wr .content .content_tit button {
+    margin-left: 22px;
+    width: 34px;
+    height: 34px;
+    box-sizing: border-box;
+    color: #669eff;
+    border: 1px solid #669eff;
+    background: none;
+    border-radius: 100%;
+    line-height: 32px;
+    font-size: 20px;
+    font-weight: 100;
+    cursor: pointer;
+    flex-shrink: 0;
+  }
+  .lt_review .lt_rv_wr ul li .lt_wr .content .lt_detail {
+    width: 730px;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    transition: all 0.3s;
+    font-size: 20px;
+    color: #506285;
+  }
+  .lt_review .lt_rv_wr ul li.on .lt_wr .content .lt_detail {
+    margin-top: 18px;
+    height: 50px;
+    overflow: auto;
+    visibility: visible;
+  }
+  .lt_review .lt_rv_wr ul li .lt_wr .lt_date {
+    font-size: 16px;
+    color: #506285;
+    width: 72px;
+    display: block;
+    flex-shrink: 0;
+    text-align: right;
+  }
+  .lt_review .lt_rv_wr ul li .lt_wr .more {
+    font-size: 16px;
+    flex-shrink: 0;
+    color: #2d72db;
+    font-weight: 700;
+    width: 72px;
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .lt_review .lt_rv_wr ul li .lt_wr .more svg {
+    width: 11px;
+  }
+  .lt_review .lt_rv_wr ul li .lt_wr .more svg path {
+    stroke: #2d72db;
+  }
+  .lt_review .lt_rv_wr ul li:hover {
+    background: #e6eeff;
+  }
+  .lt_review .lt_rv_wr ul li:hover .lt_wr .lt_date {
+    display: none;
+  }
+  .lt_review .lt_rv_wr ul li:hover .lt_wr .more {
+    display: flex;
+  }
 
 @media (max-width : 969px){
     #bo_v_title{

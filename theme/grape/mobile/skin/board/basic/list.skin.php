@@ -24,6 +24,8 @@ if (G5_IS_MOBILE) {
     <div id="investment">
 <?php } else if($board['bo_table'] == 'my_investment'){?>
     <div id="my_investment">
+<?php } else if($board['bo_table'] == 'broadcast_eng'){ ?>
+    <div id="board_eng">
 <?php } else{ ?>
     <div id="notice_news">
 <?php } ?>

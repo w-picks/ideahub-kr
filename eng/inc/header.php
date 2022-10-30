@@ -61,11 +61,14 @@
                     <a href="/bbs/board.php?bo_table=broadcast_eng">News & Events</a>
                     <ul class="depth2">
                         <li>
+                            <a href="/bbs/board.php?bo_table=broadcast_eng">News & Events</a>
+                        </li>
+                        <!-- <li>
                             <a href="/eng/news/?=1">News</a>
                         </li>
                         <li>
                             <a href="/eng/news/?=2">Events & Notice</a>
-                        </li>
+                        </li> -->
                     </ul>
                 </li>
                 <li>

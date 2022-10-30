@@ -177,6 +177,7 @@ if (G5_IS_MOBILE) {
             $result = sql_query($sql); 
         ?>
         <?php if($board['bo_table'] == 'my_investment') { ?>
+            <div class="myInvestmentSel_wrap">
             <select name='wr_1' id="myInvestmentSelect" required itemname="대상">
                 <option value=''>선택하세요</option>
                 <?php for ($i = 0; $row = sql_fetch_array($result); $i++) { ?>
@@ -192,6 +193,8 @@ if (G5_IS_MOBILE) {
                 <option value='3분기' <?php if($wr_5 == "3분기") echo " selected"; ?> >3분기</option>    
                 <option value='4분기' <?php if($wr_5 == "4분기") echo " selected"; ?> >4분기</option>    
             </select>
+
+            </div>
         <?php } ?>
 
         <div class="write_div">
