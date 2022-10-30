@@ -203,7 +203,24 @@
             Ideahub continues to acquire patents and provides <br>licensing service to various innovators.
             </p>
             <div class="detail_tit_banner">
-                <img src="../images/portfolio_tit_bn.png">
+                <img src="../images/portfolio_tit_bn.png" class="pc_img">
+                <img src="../images/portfolio_tit_bn_mo.png" class="mo_img">
+            </div>
+            <div class="portfolio_graph">
+                <ul>
+                    <li>
+                        <p>Number of Patents and Applications (by Country)</p>
+                        <div class="img">
+                            <img src="/img/our_portfolio_1.png">
+                        </div>
+                    </li>
+                    <li>
+                        <p>Number of Patents and Applications (by Technology)</p>
+                        <div class="img">
+                            <img src="/img/our_portfolio_2.png">
+                        </div>
+                    </li>
+                </ul>
             </div>
         </div>
     </article>
