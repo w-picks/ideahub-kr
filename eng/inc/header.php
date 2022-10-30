@@ -58,7 +58,7 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="/eng/news">News & Events</a>
+                    <a href="/bbs/board.php?bo_table=broadcast_eng">News & Events</a>
                     <ul class="depth2">
                         <li>
                             <a href="/eng/news/?=1">News</a>

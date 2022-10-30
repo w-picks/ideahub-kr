@@ -120,7 +120,7 @@ if (G5_IS_MOBILE) {
             2022.09.22 ideahub
             보도자료 신문사 태그
         -->
-        <?php if($board['bo_table'] == 'broadcast') { ?>
+        <?php if($board['bo_table'] == 'broadcast' || $board['bo_table'] == 'broadcast_eng') { ?>
         <div class="bo_w_tit write_div">
             <label for="wr_1" class="sound_only">신문사 태그</label>
             <input type="text" name="wr_1" value="<?php echo $wr_1 ?>" id="wr_1" required class="frm_input full_input" placeholder="신문사 태그">
