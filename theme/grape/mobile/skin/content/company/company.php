@@ -69,11 +69,11 @@
         <p class="scroll-trans">아이디어허브는 저평가된 특허를 High Quality의 IP로 확대하여 High valued IP Portfolio를 완성합니다.</p>
         <ul>
             <li class="scroll-trans">
-                <div class="img"></div>
+                <div class="img"><img src="<?php echo G5_IMG_URL ?>/our_portfolio_1.png"></div>
                 <p>보유 특허 건수 (나라별)</p>
             </li>
             <li class="scroll-trans scroll-trans-delay-300">
-                <div class="img"></div>
+                <div class="img"><img src="<?php echo G5_IMG_URL ?>/our_portfolio_2.png"></div>
                 <p>보유 특허 건수 (기술별)</p>
             </li>
         </ul>

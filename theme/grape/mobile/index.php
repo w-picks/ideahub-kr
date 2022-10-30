@@ -181,7 +181,7 @@ echo latest('theme/review', 'broadcast', 5, 20);
 
 <section id="section7" class="direct_banner">
         <p>아이디어 허브에 대해 궁금한 점이 있으신가요?</p>
-        <button>1:1문의<img src="<?php echo G5_IMG_URL ?>/ico_direct_faq.svg"></button>
+        <button onclick="window.location.href='<?php echo G5_URL ?>/bbs/qawrite.php'">1:1문의<img src="<?php echo G5_IMG_URL ?>/ico_direct_faq.svg"></button>
 </section>
 
 <script>

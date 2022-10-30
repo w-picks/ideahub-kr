@@ -13,6 +13,11 @@
             <ul>
                 <li>
                     <a href="/eng/about">About US</a>
+                    <ul class="depth2">
+                        <li>
+                            <a href="/eng/about/?=1">Vision</a>
+                        </li>
+                    </ul>
                 </li>
                 <li>
                     <a href="/eng/venturing">IP Venturing</a>
