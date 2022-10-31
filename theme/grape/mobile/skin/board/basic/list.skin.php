@@ -324,7 +324,7 @@ if (G5_IS_MOBILE) {
                         <span class="bo_date"><?php echo $list[$i]['datetime2'] ?></span>
                         <div class="views">
                         <img src="<?php echo G5_IMG_URL ?>/ico_view.svg">
-                        <span>조회수</span>
+                        <span><?php echo $list[$i]['wr_hit'] ?></span>
                         </div>
                         <?php if ($list[$i]['comment_cnt']) { ?><span class="sound_only">댓글</span> <i class="fa fa-commenting-o" aria-hidden="true"></i> <?php echo $list[$i]['comment_cnt']; ?> <?php } ?>
                         <?php if ($list[$i]['wr_good']) { ?><i class="fa fa-thumbs-o-up"></i> <?php echo $list[$i]['wr_good'] ?> <?php } ?>
