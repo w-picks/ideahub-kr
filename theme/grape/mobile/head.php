@@ -169,6 +169,14 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
     <div id="al_menu">
         <div class="bg"></div>
         <div class="menu_wr">
+            <!-- <ul class="lang">
+                <li>
+                    <a href="/">kr</a>
+                </li>
+                <li>
+                    <a href="/eng">en</a>
+                </li>
+            </ul> -->
             <ul id="menu">
             <?php
             $menu_datas = get_menu_db(1, true);
