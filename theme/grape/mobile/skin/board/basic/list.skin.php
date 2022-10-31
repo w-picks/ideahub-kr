@@ -563,17 +563,16 @@ function select_copy(sw) {
         const projectList = document.querySelector(".project_list");
         const projectListList = document.querySelectorAll(".project_list > li");
         const tabHandle = (num, el) => {
-            console.log(el)
             let eleLength = 0;
+            let listTotal = document.querySelector("#bo_list_total em");
             projectListList.forEach((item, i, ele) => {
                 item.style.display = "flex"
-                let listTotal = document.querySelector("#bo_list_total em");
                 if(num === 0){
                     item.style.display = "flex"
                     listTotal.innerHTML = projectListList.length;
-                    
                 }else if(!item.classList.contains(`tabTag_${num}`)){
                     item.style.display = "none"
+                    listTotal.innerHTML = eleLength;
                 }
                 if(item.classList.contains(`tabTag_${num}`)){
                     eleLength++;
