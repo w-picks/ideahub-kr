@@ -1,8 +1,10 @@
 <?php
 if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 
+include_once('./_common.php');
 include_once(G5_THEME_PATH.'/head.sub.php');
 include_once(G5_LIB_PATH.'/latest.lib.php');
+include_once(G5_LIB_PATH.'/outlogin.lib.php');
 include_once(G5_LIB_PATH.'/outlogin.lib.php');
 include_once(G5_LIB_PATH.'/poll.lib.php');
 include_once(G5_LIB_PATH.'/visit.lib.php');
@@ -209,7 +211,7 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
                     if($k > 0)
                         echo '</ul>'.PHP_EOL;
                     ?>
-                </li>
+                </li> 
             <?php
 			$i++;
             }	//end foreach $row
@@ -217,6 +219,27 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
             if ($i == 0) {  ?>
                 <li id="gnb_empty">메뉴 준비 중입니다.<?php if ($is_admin) { ?> <br><a href="<?php echo G5_ADMIN_URL; ?>/menu_list.php">관리자모드 &gt; 환경설정 &gt; 메뉴설정</a>에서 설정하세요.<?php } ?></li>
             <?php } ?>
+
+            <!-- 마이페이지 -->
+            <?php if($is_member) { ?>
+            <li class="menu_li">
+                <button type="button" class="btn_menu_op">
+                    <span class="sound_only"></span><i class="fa fa-chevron-down"></i>
+                </button>
+                <h2>마이페이지</h2>
+                <ul class="sub_menu">
+                    <li class="sb_menu_li">
+                        <a href="/bbs/member_confirm.php?url=register_form.php" target="" class="sb_menu_a"><span></span>정보수정</a>
+                    </li>
+                    <?php if($member['mb_level'] > 2) { ?>
+                    <li class="sb_menu_li">
+                        <a href="/bbs/board.php?bo_table=my_investment" target="" class="sb_menu_a"><span></span>나의 투자</a>
+                    </li>
+                    <?php } ?>
+                </ul>
+            </li>
+            <?php } ?>
+
             </ul>
             <button type="button" class="btn_close"><span class="sound_only">닫기</span></button>
             <div class="ol">
