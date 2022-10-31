@@ -41,7 +41,7 @@ include_once(G5_THEME_MOBILE_PATH.'/head.php');
                     <ul>
                         <li>
                             <p>예상수익률</p>
-                            <div><b>연 <?php echo $row['wr_5'] ?></b><br>이상</div>
+                            <div><b>연 <?php echo $row['wr_5'] ?>%</b><br>이상</div>
                         </li>
                         <li>
                             <p>모집금액</p>
