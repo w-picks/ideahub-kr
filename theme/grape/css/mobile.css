@@ -1164,9 +1164,10 @@ ul {
 .ft_wr .footer_logo img {
 }
 .ft_wr .footer_menu {
-  width: 498px;
+  width: 404px;
   display: flex;
   justify-content: space-between;
+  text-align: center;
 }
 .ft_wr .footer_menu > li {
   border-right: 1px solid #353e51;

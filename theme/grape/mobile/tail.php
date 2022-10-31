@@ -19,27 +19,27 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
             <!-- <div id="ft_copy">Copyright &copy; <b>소유하신 도메인.</b> All rights reserved.</div> -->
             <ul class="footer_menu">
                 <li>
-                    <h6>About</h6>
+                    <h6>회사소개</h6>
                     <ul>
-                        <li><a href="/bbs/content.php?co_id=company">About</a></li>
-                        <li><a href="/">C.I</a></li>
+                        <li><a href="/bbs/content.php?co_id=company">회사소개</a></li>
+                        <!-- <li><a href="/">C.I</a></li>
                         <li><a href="/">아이디어허브팁</a></li>
-                        <li><a href="/">파트너&투자자</a></li>
+                        <li><a href="/">파트너&투자자</a></li> -->
                     </ul>
                 </li>
                 <li>
-                    <h6>Service</h6>
+                    <h6>투자하기</h6>
                     <ul>
-                        <li><a href="/">IP 라이센싱</a></li>
-                        <li><a href="/">특허 우산 서비스</a></li>
-                        <li><a href="/">EoU DB</a></li>
+                        <li><a href="/bbs/board.php?bo_table=investment">투자하기</a></li>
+                        <!-- <li><a href="/">특허 우산 서비스</a></li>
+                        <li><a href="/">EoU DB</a></li> -->
                     </ul>
                 </li>
                 <li>
-                    <h6>Contact</h6>
+                    <h6>새소식</h6>
                     <ul>
-                        <li><a href="/">공지사항</a></li>
-                        <li><a href="/">보도자료</a></li>
+                        <li><a href="/bbs/board.php?bo_table=notice">공지사항</a></li>
+                        <li><a href="/bbs/board.php?bo_table=broadcast">보도자료</a></li>
                     </ul>
                 </li>
             </ul>
