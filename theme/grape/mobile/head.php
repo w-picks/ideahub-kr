@@ -166,7 +166,6 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
         </script>
         
     </div>
-
     <div id="al_menu">
         <div class="bg"></div>
         <div class="menu_wr">
