@@ -2002,6 +2002,7 @@ ul {
     display: block;
     padding: 0 40px;
     box-sizing: border-box;
+    width: 100%;
   }
   #section1 article h2 {
     font-size: 30px;
