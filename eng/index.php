@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
+
 <?php include 'inc/header.php' ?>
 
 <div id="main_wrap">
@@ -17,6 +9,9 @@
       Experts In Developing and Executing Worldwide IP Strategies</p>
     <button class="default_btn">LEARN MORE</button>
     </article>
+    <video muted autoplay loop>
+        <source src="/img/idh_main_vid.mp4" type="video/mp4"></source>
+    </video>
   </section>
   <section class="company_profile">
     <article>
@@ -128,5 +123,3 @@
 
 
 <?php include 'inc/footer.php' ?>
-</body>
-</html>

@@ -36,4 +36,15 @@ $(document).ready(function () {
     }
   });
   console.log("1111");
+
+  if (window.innerWidth < 910) {
+    $(".main_visual .default_btn").addClass("wt");
+  }
+  $(window).on("resize", function () {
+    if (window.innerWidth < 910) {
+      $(".main_visual .default_btn").addClass("wt");
+    } else {
+      $(".main_visual .default_btn").removeClass("wt");
+    }
+  });
 });

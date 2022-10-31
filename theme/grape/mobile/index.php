@@ -8,7 +8,7 @@ include_once(G5_THEME_MOBILE_PATH.'/head.php');
 <div id="main_wrapper">
     <section id="main_vid">
         <video muted autoplay loop>
-            <source src="<?php echo G5_IMG_URL ?>/istockphoto-1409542689-640_adpp_is.mp4" type="video/mp4"></source>
+            <source src="<?php echo G5_IMG_URL ?>/idh_main_vid.mp4" type="video/mp4"></source>
         </video>
         
         <article>

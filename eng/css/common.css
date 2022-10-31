@@ -27,6 +27,26 @@ header h1 img {
 header nav {
   margin-left: 108px;
   width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav .lang li {
+  padding: 0;
+}
+header nav .lang a {
+  color: #8496ba;
+  font-size: 13px;
+  padding: 0 8px;
+  display: block;
+  height: 10px;
+  line-height: 10px;
+}
+header nav .lang a:hover::after {
+  display: none;
+}
+header nav .lang .kr a {
+  border-right: 1px solid #8496ba;
 }
 header nav ul {
   display: flex;
@@ -195,14 +215,28 @@ body {
 
 /* main */
 .main_visual {
-  height: 760px;
-  background: url(../images/main_bg_idh_eng.png) no-repeat center / cover;
-  padding-top: 285px;
+  height: calc(100vh - 60px);
   box-sizing: border-box;
+  position: relative;
 }
 .main_visual article {
   width: 1136px;
   margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  text-align: right;
+  margin-top: -52px;
+}
+.main_visual video {
+  position: absolute;
+  height: auto;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .main_visual article h2 {
   font-size: 55px;
@@ -256,15 +290,6 @@ body {
   padding: 0 24px;
   box-sizing: border-box;
   justify-content: flex-end;
-}
-.company_profile article ul li::after {
-  content: "";
-  position: absolute;
-  width: 27px;
-  height: 27px;
-  background: #d9d9d9;
-  left: 28px;
-  top: 63px;
 }
 .company_profile article ul li b {
   color: #2d72db;
@@ -750,7 +775,7 @@ body {
 }
 .news {
   padding-top: 118px;
-  padding-bottom: 100px;
+  padding-bottom: 150px;
 }
 .news h2 {
   text-align: center;
@@ -833,7 +858,7 @@ body {
     right: 0;
     background: #fff;
     width: 80%;
-    height: 100%;
+    height: calc(100% - 60px);
     /* opacity: 0; */
     /* visibility: hidden; */
     transition: all 0.3s;
@@ -891,6 +916,10 @@ body {
     position: relative;
     height: 100vh;
     padding: 0;
+    background: url(/img/idh_main_mo.png) no-repeat center / cover;
+  }
+  .main_visual video {
+    display: none;
   }
   .main_visual article {
     width: 100%;
@@ -949,9 +978,6 @@ body {
   .company_profile article ul li:nth-child(1),
   .company_profile article ul li:nth-child(2) {
     border-bottom: 1px solid #c1cbe0;
-  }
-  .company_profile article ul li::after {
-    display: none;
   }
   .company_profile article ul li b {
     font-size: 25px;
@@ -1265,6 +1291,7 @@ body {
   .news {
     padding-top: 60px;
     padding-bottom: 40px;
+    height: auto;
   }
   .news h2 {
     font-size: 30px;
@@ -1297,5 +1324,23 @@ body {
   .news ul li a div:not(.date) {
     width: 75%;
     flex-flow: column;
+  }
+  .news .txt_animation {
+    display: none;
+  }
+  header nav .lang {
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    left: 0;
+    bottom: 20px;
+    width: 100%;
+  }
+  header nav .lang li {
+    flex: 1;
+    text-align: center;
+  }
+  header nav .lang li a {
+    padding: 4px 8px;
   }
 }
