@@ -367,6 +367,10 @@ filter: blur(3px);}
 #invest_detail .tab_container .tab_content > div{
     padding:33px 20px;
     box-sizing: border-box;
+    display: none;
+}
+#invest_detail .tab_container .tab_content > div.on{
+    display: unset;
 }
 #invest_detail .tab_container .tab_content > div.tab_con1{}
 #invest_detail .tab_container .tab_content > div.tab_con1 ul{

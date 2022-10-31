@@ -328,7 +328,7 @@ if (G5_IS_MOBILE) {
                 <li>투자정보</li>
             </ul>
             <div class="tab_content">
-                <div class="tab_con1">
+                <div class="tab_con1 on">
                     <ul>
                         <li>
                             <span>펀딩 시작일</span>
@@ -343,6 +343,9 @@ if (G5_IS_MOBILE) {
                             <p><?php echo $view['wr_5'] ?>%</p>
                         </li>
                     </ul>
+                </div>
+                <div>
+                    <?php echo $view['wr_content'] ?>
                 </div>
             </div>
         </article>
@@ -460,6 +463,13 @@ if(investDetail){
 
     $(".amount em").html(Number(amount).toLocaleString('ko-KR'))
     $(".target_amount em").html(Number(tagetAmount).toLocaleString('ko-KR'))
+    
+    $(".tabs li").on("click", function(){
+        $(this).addClass("on").siblings().removeClass("on");
+        let Ind = $(this).index();
+        $(".tab_content > div").eq(Ind).addClass("on").siblings().removeClass("on");
+        
+    })
 }
    
 
