@@ -590,7 +590,6 @@ ul {
 /* main video */
 #main_vid {
   height: calc(100vh - 59px);
-  background: #ddd;
   position: relative;
 }
 
@@ -624,13 +623,14 @@ ul {
 /* section1 */
 #section1 {
   padding: 175px 0;
-  width: 920px;
-  margin: auto;
+  background: rgba(240, 245, 255, 0.5);
 }
 #section1 article {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 920px;
+  margin: auto;
 }
 #section1 article h2 {
   font-size: 45px;
@@ -1975,9 +1975,16 @@ ul {
     width: 55px;
     height: 55px;
   }
+  #main_vid {
+    background: url(/img/idh_main_mo.png) no-repeat center / cover;
+  }
+  #main_vid video {
+    display: none;
+  }
   #main_vid article {
     width: 100%;
     text-align: center;
+    color: #fff;
   }
   #main_vid article h2 {
     font-size: 35px;

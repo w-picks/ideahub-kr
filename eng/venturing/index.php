@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+
 <?php include '../inc/header.php' ?>
 <div id="detail_wrap" class="ip">
     <h3>IP Venturing</h3>
@@ -22,7 +14,7 @@
             Create new Global IP Licensing Platforms </p>
             <div class="detail_tit_banner">
                 <img src="../images/olp_tit_bn_1.png" class="pc_img">
-                <img src="../images/olp_tit_bn_mo.png" class="img_mo">
+                <img src="../images/olp_tit_bn_mo.png" class="mo_img">
             </div>
             <div class="ip_sub">
                 <p class="ip_txt_1">Global Open IP<br>
@@ -62,5 +54,3 @@
     </article>
 </div>
 <?php include '../inc/footer.php' ?>
-</body>
-</html>

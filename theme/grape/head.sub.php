@@ -37,12 +37,12 @@ header("Pragma: no-cache"); // HTTP/1.0
 <meta charset="utf-8">
 <?php
 if (G5_IS_MOBILE) {
-    echo '<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=0,maximum-scale=10,user-scalable=yes">'.PHP_EOL;
+    echo '<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=0,maximum-scale=0,user-scalable=no">'.PHP_EOL;
     echo '<meta name="HandheldFriendly" content="true">'.PHP_EOL;
     echo '<meta name="format-detection" content="telephone=no">'.PHP_EOL;
     echo '<meta http-equiv="X-UA-Compatible" content="IE=10,chrome=1">'.PHP_EOL;
 } else {
-    echo '<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=0,maximum-scale=10,user-scalable=yes">'.PHP_EOL;
+    echo '<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=0,maximum-scale=10,user-scalable=no">'.PHP_EOL;
     echo '<meta http-equiv="imagetoolbar" content="no">'.PHP_EOL;
     echo '<meta http-equiv="X-UA-Compatible" content="IE=edge">'.PHP_EOL;
 }
@@ -50,7 +50,33 @@ if (G5_IS_MOBILE) {
 if($config['cf_add_meta'])
     echo $config['cf_add_meta'].PHP_EOL;
 ?>
-<title><?php echo $g5_head_title; ?></title>
+<?php 
+echo '<link rel="shortcut icon" href="/img/favi/favicon.ico"/>
+<link rel="apple-touch-icon" sizes="57x57" href="/img/favi/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/img/favi/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/img/favi/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/img/favi/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/img/favi/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/img/favi/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/img/favi/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/img/favi/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/img/favi/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/img/favi/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/favi/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/img/favi/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/img/favi/favicon-16x16.png">
+<link rel="manifest" href="/img/favi/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/img/favi/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+  <meta property="og:title" content="IDEAHUB(아이디어허브)">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="/img/favi/idh_thumnail.png">
+  <meta property="og:description" content="글로벌 특허 수익화 전문기업">
+'
+?>
+<!-- <title><?php echo $g5_head_title; ?></title> -->
+<title>IDEAHUB:Research Corporation</title>
 <link rel="stylesheet" href="<?php echo run_replace('head_css_url', G5_THEME_CSS_URL.'/'.(G5_IS_MOBILE ? 'mobile' : 'default').'.css?ver='.G5_CSS_VER, G5_THEME_URL); ?>">
 <!--[if lte IE 8]>
 <script src="<?php echo G5_JS_URL ?>/html5.js"></script>
