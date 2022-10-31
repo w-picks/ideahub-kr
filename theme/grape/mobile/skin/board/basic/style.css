@@ -369,6 +369,9 @@ filter: blur(3px);}
     box-sizing: border-box;
     display: none;
 }
+#invest_detail .tab_container .tab_content > div img{
+    max-width: 100%;
+}
 #invest_detail .tab_container .tab_content > div.on{
     display: unset;
 }
