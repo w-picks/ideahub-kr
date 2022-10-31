@@ -107,7 +107,7 @@ include_once(G5_THEME_MOBILE_PATH.'/head.php');
         <article class="txt_box scroll-trans">
             <p>아이디어허브 투자자이신가요?</p>
             <h2>나의 투자 현황을<br>알아보세요!</h2> 
-            <button class="default_btn blue"><div>나의 투자 레포트<svg width="19" height="7" viewBox="0 0 19 7" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 6H17L12.678 1" stroke="white" stroke-width="1.5"/></svg></div>
+            <button class="default_btn blue" onclick="location.href='<?php echo G5_BBS_URL ?>/board.php?bo_table=my_investment>'"><div>나의 투자 레포트<svg width="19" height="7" viewBox="0 0 19 7" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 6H17L12.678 1" stroke="white" stroke-width="1.5"/></svg></div>
             <span></span>
             </button>
         </article>
