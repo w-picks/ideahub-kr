@@ -334,7 +334,7 @@ if (G5_IS_MOBILE) {
                     
                 </li>
             <?php }} ?>
-            <?php if (count($list) == 0) { echo '<li class="empty_table">게시물이 없습니다.</li>'; } ?>
+            <?php if (count($list) == 0) { echo '<li class="empty_table" style="text-indent:10px;">게시물이 없습니다.</li>'; } ?>
         </ul>
     </div>
 

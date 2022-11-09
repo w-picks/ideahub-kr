@@ -32,7 +32,6 @@ include_once(G5_THEME_MOBILE_PATH.'/head.php');
             $sql = " select * from g5_write_investment where wr_is_comment = 0 order by wr_num desc limit 0, 3 ";        
             $result = sql_query($sql);
             for ($i=0; $row = sql_fetch_array($result); $i++) {
-                // var_dump($row)
             ?>
                 <div class="swiper-slide slide_<?php echo $i+1 ?>">
                     <p class="slide-name">모집중인 프로젝트</p>
@@ -57,8 +56,10 @@ include_once(G5_THEME_MOBILE_PATH.'/head.php');
                     </button>
                 </div>
                 <?php
-                }
+                } 
                 ?>
+
+                
                 <!-- <div class="swiper-slide slide_2">
                     <p class="slide-name">모집중인 프로젝트</p>
                     <h3>Streaming Project</h3>
@@ -92,13 +93,17 @@ include_once(G5_THEME_MOBILE_PATH.'/head.php');
                     <div class="slide_content_bg"></div>
                 </div>
                 <?php } ?>
+
+                
                 <!-- <div class="swiper-slide slide_2">
                     <div class="slide_content_bg"></div>
                 </div> -->
             </div>
+            
             <div class="swiper-button-prev swiper-btn"></div>
             <div class="swiper-button-next swiper-btn"></div>
             <div class="swiper-pagination"></div>
+           
         </div>
     </section>
     
@@ -157,15 +162,15 @@ include_once(G5_THEME_MOBILE_PATH.'/head.php');
             <ul>
                 <li>
                     <em>프로젝트명</em>
-                    <p><b>IoT Licensing</b></p>
+                    <p><b>IoT IP</b></p>
                 </li>
                 <li>
                     <em>총 투자모집 금액</em>
-                    <p><b>2</b>억 <b>1400</b>만</p>
+                    <p>약<b>121</b>억</p>
                 </li>
                 <li>
                     <em>수익률</em>
-                    <p><b>49.67</b>%</p>
+                    <p><b>37</b>%</p>
                 </li>
             </ul>
         </article>
@@ -226,7 +231,40 @@ echo latest('theme/review', 'broadcast', 5, 20);
         })
     })
                 
-                
+    console.log($(".swiper-slide").length)
+
+    if($(".swiper-slide").length == 0){
+        $(".project_slide_content .swiper-wrapper").html(`
+        <div class="swiper-slide no-project">
+                     <img src="<?php echo G5_IMG_URL ?>/no_project_txt.png" class="pc_img">
+                     <img src="<?php echo G5_IMG_URL ?>/no_project_txt_mo.png" class="mo_img">
+                     <p>프로젝트 오픈 예정입니다!</p>
+                 </div>`)
+        $(".project_slide_bg .swiper-wrapper").html(`
+        <div class="swiper-slide no-project">
+                     <div class="slide_content_bg"></div>
+                 </div>`)
+
+                 $(".swiper-btn").hide();
+                 $(".swiper-pagination").hide();
+                 $(".project_slide_content").addClass("no-project");
+                 $(".project_slide_bg").addClass("no-project");
+    }
+
+    // <?php if(sql_fetch_array($result) == "Null"){ ?>
+    //             <!-- <div>오픈예정</div> -->
+    //             <div class="swiper-slide no-project">
+    //                 <img src="<?php echo G5_IMG_URL ?>/no_project_txt.png">
+    //                 <p>프로젝트 오픈 예정입니다!</p>
+    //             </div>
+    //             <?php } ?>
+
+    // <?php if(sql_fetch_array($result) == null){ ?>
+    //             <!-- <div>오픈예정</div> -->
+    //             <div class="swiper-slide no-project">
+    //                 <div class="slide_content_bg"></div>
+    //             </div>
+    //         <?php } ?>
     
 </script>
 
