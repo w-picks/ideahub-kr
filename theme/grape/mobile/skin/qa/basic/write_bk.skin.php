@@ -7,7 +7,7 @@ add_stylesheet('<link rel="stylesheet" href="'.$qa_skin_url.'/style.css">', 0);
 <section id="bo_w" class="direct_inquiry">
     
     <!-- 게시물 작성/수정 시작 { -->
-    <form name="fwrite" id="fwrite" action="javascript://" onsubmit="onDirect();" method="post" enctype="multipart/form-data" autocomplete="off">
+    <form name="fwrite" id="fwrite" action="<?php echo $action_url ?>" onsubmit="return fwrite_submit(this);" method="post" enctype="multipart/form-data" autocomplete="off">
     <input type="hidden" name="w" value="<?php echo $w ?>">
     <input type="hidden" name="qa_id" value="<?php echo $qa_id ?>">
     <input type="hidden" name="sca" value="<?php echo $sca ?>">
@@ -19,7 +19,12 @@ add_stylesheet('<link rel="stylesheet" href="'.$qa_skin_url.'/style.css">', 0);
     $option_hidden = '';
     $option = '';
 
-    
+    if ($is_dhtml_editor) {
+        $option_hidden .= '<input type="hidden" name="qa_html" value="1">';
+    } else {
+        $option .= "\n".'<input type="checkbox" id="qa_html" name="qa_html" onclick="html_auto_br(this);" value="'.$html_value.'" '.$html_checked.'>'."\n".'<label for="qa_html">html</label>';
+    }
+
     echo $option_hidden;
     ?>
 <h1>궁금한 점/의견을 남겨주시면<br>빠른 시일 내에 이메일로 답변 드리겠습니다.</h1>
@@ -49,7 +54,7 @@ add_stylesheet('<link rel="stylesheet" href="'.$qa_skin_url.'/style.css">', 0);
              -->
              <li>
                 <label for="qa_1" class="sound_only">이름</label>
-                <input type="text" name="qa_1" id="qa_1" required class="frm_input required" maxlength="100" placeholder="이름">
+                <input type="text" name="qa_1" value="<?php echo get_text($write['qa_1']); ?>" id="qa_1" required class="frm_input required" maxlength="100" placeholder="이름">
             </li>
             <?php if ($is_email) { ?>
             <li>
@@ -122,7 +127,6 @@ add_stylesheet('<link rel="stylesheet" href="'.$qa_skin_url.'/style.css">', 0);
     </div>
     </form>
 
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script>
     function html_auto_br(obj)
     {
@@ -193,33 +197,6 @@ add_stylesheet('<link rel="stylesheet" href="'.$qa_skin_url.'/style.css">', 0);
         $(".file_wr input[type='text']").val(fileval);
     })
 
-    emailjs.init("5hAqYbMBZtuuSyDlf");
-    const onDirect = () => {
-        if($("#all_chk").is(":checked")){
-        let userData = {
-            name : $("#qa_1").val(),
-            email:$("#qa_email").val(),
-            phone :$("#qa_hp").val(),
-            title:$("#qa_subject").val(),
-            message:$("textarea").val(),
-            file:"",
-            option:"동의",
-        }
-        console.log(userData)
-        emailjs.send("service_hqt4mtf", "template_eva9ig4", userData).then(
-          function (response) {
-            console.log("SUCCESS!", response.status, response.text);
-          },
-          function (error) {
-            console.log("FAILED...", error);
-          }
-        );
-        }else{
-            alert("개인정보 수집 이용에 동의해 주세요.");
-        }
-    }
-
-
-    </script>
+    </script
 </section>
 <!-- } 게시물 작성/수정 끝 -->
