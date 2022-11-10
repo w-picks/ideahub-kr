@@ -234,14 +234,15 @@ echo latest('theme/review', 'broadcast', 5, 20);
     console.log($(".swiper-slide").length)
 
     if($(".swiper-slide").length == 0){
-        $(".project_slide_content .swiper-wrapper").html(`
-        <div class="swiper-slide no-project">
-                     <img src="<?php echo G5_IMG_URL ?>/no_project_txt.png" class="pc_img">
-                     <img src="<?php echo G5_IMG_URL ?>/no_project_txt_mo.png" class="mo_img">
-                     <p>프로젝트 오픈 예정입니다!</p>
-                 </div>`)
+        // $(".project_slide_content .swiper-wrapper").html(`
+        // <div class="swiper-slide no-project">
+        //              <img src="<?php echo G5_IMG_URL ?>/no_project_txt.png" class="pc_img">
+        //              <img src="<?php echo G5_IMG_URL ?>/no_project_txt_mo.png" class="mo_img">
+        //              <p>프로젝트 오픈 예정입니다!</p>
+        //          </div>`)
         $(".project_slide_bg .swiper-wrapper").html(`
         <div class="swiper-slide no-project">
+        <p>프로젝트 오픈 예정입니다!</p>
                      <div class="slide_content_bg"></div>
                  </div>`)
 
