@@ -83,18 +83,7 @@ add_stylesheet('<link rel="stylesheet" href="'.$qa_skin_url.'/style.css">', 0);
                 <textarea placeholder="내용을 입력하세요. (최소 10자 이상)" required class="required"></textarea>
             </li>
 
-            <li class="bo_w_flie">
-                <label>파일 첨부하기(선택)(최대 10MB)</label>
-                <div class="file_wr">
-                    <input type="text" value="파일없음"  readonly/>
-                    <!-- <span class="lb_icon"><i class="fa fa-download" aria-hidden="true"></i><span class="sound_only">파일 #1</span></span> -->
-                    <label for="file_upload" class="file_btn">파일 업로드</label>
-                    <input type="file" name="bf_file[1]" title="파일첨부 1 :  용량 <?php echo $upload_max_filesize; ?> 이하만 업로드 가능" class="frm_file" id="file_upload">
-                    <?php if($w == 'u' && $write['qa_file1']) { ?>
-                    <!-- <input type="checkbox" id="bf_file_del1" name="bf_file_del[1]" value="1"> <label for="bf_file_del1"><?php echo $write['qa_source1']; ?> 파일 삭제</label> -->
-                    <?php } ?>
-                </div>
-            </li>
+            
 
             <!-- <li class="bo_w_flie">
                 <div class="file_wr">
