@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1,maximum-scale=1,user-scalable=no">
+  <meta name="naver-site-verification" content="">
+  <meta name="description" content="아이디어허브, 특허, 수익화, IDEAHUB, patent, monetization">
+  <meta name="keywords" content="특허, 수익화, 전문가, 라이선스, 라이선스 프로그램, patent, monetization, professional, license, license program">
   <meta property="og:title" content="IDEAHUB(아이디어허브)">
   <meta property="og:type" content="website">
   <meta property="og:image" content="/img/favi/idh_thumnail.png">

@@ -69,10 +69,13 @@ echo '<link rel="shortcut icon" href="/img/favi/favicon.ico"/>
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-TileImage" content="/img/favi/ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
-  <meta property="og:title" content="IDEAHUB(아이디어허브)">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="/img/favi/idh_thumnail.png">
-  <meta property="og:description" content="글로벌 특허 수익화 전문기업">
+<meta name="naver-site-verification" content="">
+<meta name="description" content="아이디어허브, 특허, 수익화, IDEAHUB, patent, monetization">
+<meta name="keywords" content="특허, 수익화, 전문가, 라이선스, 라이선스 프로그램, patent, monetization, professional, license, license program">
+<meta property="og:title" content="IDEAHUB(아이디어허브)">
+<meta property="og:type" content="website">
+<meta property="og:image" content="/img/favi/idh_thumnail.png">
+<meta property="og:description" content="글로벌 특허 수익화 전문기업">
 '
 ?>
 <!-- <title><?php echo $g5_head_title; ?></title> -->
