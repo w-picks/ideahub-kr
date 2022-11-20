@@ -242,7 +242,7 @@ echo latest('theme/review', 'broadcast', 5, 20);
         //          </div>`)
         $(".project_slide_bg .swiper-wrapper").html(`
         <div class="swiper-slide no-project">
-        <p>프로젝트 오픈 예정입니다!</p>
+        <p>현재 프로젝트를 준비중입니다.</p>
                      <div class="slide_content_bg"></div>
                  </div>`)
 

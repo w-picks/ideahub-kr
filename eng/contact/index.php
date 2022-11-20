@@ -30,7 +30,7 @@
                         <em>Fax.</em>
                         <p>+82-2-574-3838</p>
                         <em class="tel">Tel.</em>
-                        <p>+82- 070-7784-4204</p>
+                        <p>+82-07-7784-1643</p>
                     </div>
                 </li>
                 <li>
@@ -39,7 +39,7 @@
                     </div>
                     <div class="txt">
                         <em>Email.</em>
-                        <p><a href="http://www.ideahub.co.kr">http://www.ideahub.co.kr</a></p>
+                        <p><a href="javascript://">ideahub@ideahub.co.kr</a></p>
                         <span class="mailto"><a href="mailto:ideahub@ideahub.co.kr">Send us an email</a></span>
                     </div>
                 </li>

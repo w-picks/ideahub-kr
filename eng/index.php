@@ -4,7 +4,7 @@
 <div id="main_wrap">
   <section class="main_visual">
     <article>
-    <h2>“IDEA” Hub to Global</h2>
+    <h2>ideahub to Global</h2>
     <p>Solution For The innovation Economy<br>
       Experts In Developing and Executing Worldwide IP Strategies</p>
     <button class="default_btn">LEARN MORE</button>
@@ -27,8 +27,7 @@
           Professionals</p>
         </li>
         <li>
-          <b>25+<br>
-          YEARS</b>
+          <b>25+</b>
           <p>Licensing<br>
           Experience</p>
         </li>

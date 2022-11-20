@@ -20,11 +20,18 @@ if (G5_IS_MOBILE) {
 } 
 ?>
 
+<style>
+    #investment .sel.bo_chk.li_chk .chk_img{
+        margin-top:4px;
+        margin-right:4px;
+    }
+</style>
+
 <?php if($board['bo_table'] == 'investment'){ ?>
     <div id="investment">
 <?php } else if($board['bo_table'] == 'my_investment'){?>
     <div id="my_investment">
-<?php } else if($board['bo_table'] == 'broadcast_eng'){ ?>
+<?php } else if($board['bo_table'] == 'broadcast_eng' || $board['bo_table'] == 'events_notice'){ ?>
     <div id="board_eng">
 <?php } else{ ?>
     <div id="notice_news">
@@ -83,16 +90,24 @@ if (G5_IS_MOBILE) {
             <input type="hidden" name="sop" value="and">
             <label for="sfl" class="sound_only">검색대상</label>
             <select name="sfl" id="sfl">
-                <option value="wr_subject"<?php echo get_selected($sfl, 'wr_subject', true); ?>>제목</option>
-                <option value="wr_content"<?php echo get_selected($sfl, 'wr_content'); ?>>내용</option>
-                <option value="wr_subject||wr_content"<?php echo get_selected($sfl, 'wr_subject||wr_content'); ?>>제목+내용</option>
+            <?php if($board['bo_table'] == 'broadcast_eng' || $board['bo_table'] == 'events_notice'){ ?>
+                <option value="wr_subject"<?php echo get_selected($sfl, 'wr_subject', true); ?>>title</option>
+                <?php } else { ?>
+                    <option value="wr_subject"<?php echo get_selected($sfl, 'wr_subject', true); ?>>제목</option>
+                    <option value="wr_content"<?php echo get_selected($sfl, 'wr_content'); ?>>내용</option>
+                    <option value="wr_subject||wr_content"<?php echo get_selected($sfl, 'wr_subject||wr_content'); ?>>제목+내용</option>
+            <?php } ?>
                 <!-- <option value="mb_id,1"<?php echo get_selected($sfl, 'mb_id,1'); ?>>회원아이디</option>
                 <option value="mb_id,0"<?php echo get_selected($sfl, 'mb_id,0'); ?>>회원아이디(코)</option>
                 <option value="wr_name,1"<?php echo get_selected($sfl, 'wr_name,1'); ?>>글쓴이</option>
                 <option value="wr_name,0"<?php echo get_selected($sfl, 'wr_name,0'); ?>>글쓴이(코)</option> -->
             </select>
             <div class="input_wrap">
-            <input name="stx" value="<?php echo stripslashes($stx) ?>" placeholder="검색어를 입력해주세요." required id="stx" class="sch_input" size="15" maxlength="20">
+                <?php if($board['bo_table'] == 'broadcast_eng' || $board['bo_table'] == 'events_notice'){ ?>
+                    <input name="stx" value="<?php echo stripslashes($stx) ?>" placeholder="Please enter a search term." required id="stx" class="sch_input" size="15" maxlength="20">
+                    <?php } else { ?>
+                        <input name="stx" value="<?php echo stripslashes($stx) ?>" placeholder="검색어를 입력해주세요." required id="stx" class="sch_input" size="15" maxlength="20">
+                        <?php } ?>
             <button type="submit" value="검색" class="sch_btn"><img src="<?php echo G5_IMG_URL ?>/ico_search.svg"></button>
             </div>
             </form>

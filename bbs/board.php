@@ -218,7 +218,7 @@ $admin_href = "";
 if ($member['mb_id'] && ($is_admin === 'super' || $group['gr_admin'] === $member['mb_id']))
     $admin_href = G5_ADMIN_URL.'/board_form.php?w=u&amp;bo_table='.$bo_table;
 
-if($board['bo_table'] == 'broadcast_eng') {
+if($board['bo_table'] == 'broadcast_eng' || $board['bo_table'] == 'events_notice') {
     include_once(G5_PATH.'/eng/inc/header.php');
 } else {
     include_once(G5_BBS_PATH.'/board_head.php');
@@ -234,7 +234,12 @@ if (isset($wr_id) && $wr_id) {
 if ($member['mb_level'] >= $board['bo_list_level'] && $board['bo_use_list_view'] || empty($wr_id))
     include_once (G5_BBS_PATH.'/list.php');
 
-include_once(G5_BBS_PATH.'/board_tail.php');
+    if($board['bo_table'] == 'broadcast_eng' || $board['bo_table'] == 'events_notice') {
+        include_once(G5_PATH.'/eng/inc/footer.php');
+    } else{
+        include_once(G5_BBS_PATH.'/board_tail.php');
+        
+    }
 
 echo "\n<!-- 사용스킨 : ".(G5_IS_MOBILE ? $board['bo_mobile_skin'] : $board['bo_skin'])." -->\n";
 
