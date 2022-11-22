@@ -43,7 +43,7 @@
             <div class="scroll-trans-delay-300 scroll-trans">
                 <img src="<?php echo G5_IMG_URL ?>/ico_our_mission_heart.png">
                 <b><span>300</span>건</b>
-                <p>특허 라이센스 계약 체결 300건 이상</p>
+                <p>글로벌 특허풀 5개 가입<br>특허 라이센스 계약 체결 300건 이상</p>
             </div>
             <div class="scroll-trans-delay-400 scroll-trans">
                 <img src="<?php echo G5_IMG_URL ?>/ico_our_mission_heart.png">
