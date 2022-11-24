@@ -4,7 +4,7 @@
 <div id="main_wrap">
   <section class="main_visual">
     <article>
-    <h2>ideahub to Global</h2>
+    <h2>Ideahub to Global</h2>
     <p>Solution For The innovation Economy<br>
       Experts In Developing and Executing Worldwide IP Strategies</p>
     <button class="default_btn" onclick="window.location.href='about'">LEARN MORE</button>
