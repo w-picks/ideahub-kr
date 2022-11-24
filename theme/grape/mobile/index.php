@@ -44,7 +44,7 @@ include_once(G5_THEME_MOBILE_PATH.'/head.php');
                         </li>
                         <li>
                             <p>모집금액</p>
-                            <div><b><?php echo ceil($row['wr_4']/100000000) ?></b>억원</div>
+                            <div><b><?php echo ceil($row['wr_3']/100000000) ?></b>억원</div>
                         </li>
                         <li>
                             <p>모집기간</p>
