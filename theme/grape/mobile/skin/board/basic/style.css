@@ -540,7 +540,7 @@ white-space: nowrap;overflow-x: auto;
     font-style: normal;
 }
 
-#bo_list{margin:0 auto;max-width:1140px;}
+#bo_list{margin:0 auto;max-width:1140px; margin-bottom:70px;}
 #bo_list .all_chk {float:left;margin-top:20px}
 
 .board_list ul{clear:both;border-top:1px solid #E6EBF5}
@@ -588,6 +588,9 @@ white-space: nowrap;overflow-x: auto;
 @media (max-width: 969px){
     /* #bo_sch select{width:30%;float:left}
     #bo_sch .sch_input{width:68%;float:right;} */
+    #bo_list{
+        margin-bottom:0;
+    }
     #bo_list .all_chk{margin:10px 0}
     #nav{top:60px}
     #notice_news h1{

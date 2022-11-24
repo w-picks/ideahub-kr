@@ -40,6 +40,7 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
                     <ul>
                         <li><a href="/bbs/board.php?bo_table=notice">공지사항</a></li>
                         <li><a href="/bbs/board.php?bo_table=broadcast">보도자료</a></li>
+                        <li><a href="https://blog.naver.com/ideahub" target="_blank">blog</a></li>
                     </ul>
                 </li>
             </ul>

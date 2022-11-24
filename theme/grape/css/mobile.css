@@ -2672,6 +2672,9 @@ ul {
     .project_slide_bg .swiper-slide.no-project p {
         top: 190px;
     }
+    #section4.invest_banner .img:after {
+        display: none;
+    }
 }
 
 @media (max-width: 768px) {

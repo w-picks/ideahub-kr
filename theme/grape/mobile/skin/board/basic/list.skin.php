@@ -115,6 +115,9 @@ if (G5_IS_MOBILE) {
 
         
         <div id="bo_list_total" class="pc_view">
+        <?php if($board['bo_table'] == 'broadcast_eng' || $board['bo_table'] == 'events_notice'){ ?>
+            <span>total <em><?php echo number_format($total_count) ?></em></span>
+        <?php } else { ?>
             <span>총 <em><?php echo number_format($total_count) ?></em>
             <?php if($board['bo_table'] == 'investment') { ?>
                 개의 프로젝트가 있습니다.
@@ -122,6 +125,7 @@ if (G5_IS_MOBILE) {
                     건
                     <?php } ?>
             </span>
+            <?php } ?>
         </div>
     </article>
     <?php } ?>

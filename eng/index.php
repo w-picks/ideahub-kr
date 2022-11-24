@@ -7,7 +7,7 @@
     <h2>ideahub to Global</h2>
     <p>Solution For The innovation Economy<br>
       Experts In Developing and Executing Worldwide IP Strategies</p>
-    <button class="default_btn">LEARN MORE</button>
+    <button class="default_btn" onclick="window.location.href='about'">LEARN MORE</button>
     </article>
     <video muted autoplay loop>
         <source src="/img/idh_main_vid.mp4" type="video/mp4"></source>
@@ -68,13 +68,13 @@
           <p>Ideahub owns global professional networks and knowhow to find right value for strong IPs.</p>
         </li>
       </ul>
-      <button class="default_btn wt">SUBMIT PARTNERS</button>
+      <button class="default_btn wt" onclick="window.location.href='/bbs/qawrite.php'">SUBMIT PARTNERS</button>
     </article>
   </section>
   <section class="contact">
     <h2>Contact</h2>
     <p>For general questions, please contact us.</p>
-    <button class="default_btn wt">CONTACT US</button>
+    <button class="default_btn wt" onclick="window.location.href='/bbs/qawrite.php'">CONTACT US</button>
   </section>
   <section class="news">
   <h2>IDEAHUB News</h2>

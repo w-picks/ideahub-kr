@@ -49,7 +49,7 @@
                 <img src="<?php echo G5_IMG_URL ?>/ico_our_mission_heart.png">
                 <b><span>3,000</span>건</b>
                 <p>
-                    사업개시 후 5년 만에 이동통신, 차세개 코덱, <br class="pc">
+                    사업개시 후 5년 만에 이동통신, 차세대 코덱, <br class="pc">
                     스트리밍, 반도체, 클라우드 등의 <br class="pc">
                     분야에서 약 3,000여건의 특허 확보
                 </p>

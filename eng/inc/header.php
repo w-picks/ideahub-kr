@@ -117,11 +117,11 @@
             </ul>
             <ul class="lang">
                 <li class="kr">
-                    <a href="/">kr</a>
+                    <a href="/">kor</a>
                 </li>
-                <li>
+                <!-- <li>
                     <a href="/eng">en</a>
-                </li>
+                </li> -->
             </ul>
         </nav>
         <button class="hd_btn">

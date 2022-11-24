@@ -179,6 +179,8 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
                     <a href="/eng">en</a>
                 </li>
             </ul> -->
+            <a href="/eng" class="lang" style="text-align:center; color:#939393; line-height:25px; position:absolute; top:0; left:0; width:100%;">eng</a>
+
             <ul id="menu">
             <?php
             $menu_datas = get_menu_db(1, true);
