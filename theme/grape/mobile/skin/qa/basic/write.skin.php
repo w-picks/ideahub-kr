@@ -198,6 +198,8 @@ add_stylesheet('<link rel="stylesheet" href="'.$qa_skin_url.'/style.css">', 0);
         emailjs.send("service_hqt4mtf", "template_eva9ig4", userData).then(
           function (response) {
             console.log("SUCCESS!", response.status, response.text);
+            alert('문의가 성공적으로 접수 되었습니다.');
+            window.location.href="/";
           },
           function (error) {
             console.log("FAILED...", error);
