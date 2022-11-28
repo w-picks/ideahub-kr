@@ -340,7 +340,15 @@ if (G5_IS_MOBILE) {
                     </div>
                     <div class="bo_info">
                         <!-- <span class="sound_only">작성자</span><?php echo $list[$i]['name'] ?> -->
-                        <span class="bo_date"><?php echo $list[$i]['datetime2'] ?></span>
+                        <?php
+                        if($_GET['bo_table'] == 'broadcast' || $_GET['bo_table'] == 'broadcast_eng') {
+                            $preDate = $list[$i]['wr_3'] == '' ? $list[$i]['wr_datetime'] : $list[$i]['wr_3'];
+                            $date = explode(' ', $preDate);
+                        } else {
+                            $date = explode(' ', $list[$i]['wr_datetime']);
+                        }
+                        ?> 
+                        <span class="bo_date"><?php echo $date[0] ?></span>
                         <div class="views">
                         <img src="<?php echo G5_IMG_URL ?>/ico_view.svg">
                         <span><?php echo $list[$i]['wr_hit'] ?></span>

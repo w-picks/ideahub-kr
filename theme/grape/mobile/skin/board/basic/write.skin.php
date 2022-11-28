@@ -129,6 +129,10 @@ if (G5_IS_MOBILE) {
             <label for="wr_2" class="sound_only">링크</label>
             <input type="text" name="wr_2" value="<?php echo $wr_2 ?>" id="wr_2" required class="frm_input full_input" placeholder="링크">
         </div>
+        <div class="bo_w_tit write_div">
+            <label for="wr_3" class="sound_only">노출 날짜</label>
+            <input type="text" name="wr_3" value="<?php echo $wr_3 ?>" id="wr_3" required class="frm_input full_input" placeholder="노출 날짜 (예시 2022-11-28 12:00:00)">
+        </div>
         <?php } ?>
 
         <!-- 투자하기 작성페이지 -> 추가 항목 기입란 ideahub -->

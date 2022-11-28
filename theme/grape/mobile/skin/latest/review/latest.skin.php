@@ -30,7 +30,7 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
                 <div class="content">
                     <div class="content_tit">
                         <div>
-                    <span class="lt_date mo"><?php echo $list[$i]['datetime2']; ?></span>
+                    <span class="lt_date mo"><?php echo explode(' ', $list[$i]['wr_datetime'])[0]; ?></span>
                 <?php
                 echo "<strong>";
                 if ($list[$i]['icon_secret']) echo "<i class=\"fa fa-lock\" aria-hidden=\"true\"></i><span class=\"sound_only\">비밀글</span> ";
@@ -50,7 +50,7 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
     </div>
                 </div>
                 <!-- <span class="lt_date"><?php echo $list[$i]['datetime2']; ?>  / <?php echo $list[$i]['name'] ?></span> -->
-                <span class="lt_date pc"><?php echo $list[$i]['datetime2']; ?></span>
+                <span class="lt_date pc"><?php echo explode(' ', $list[$i]['wr_datetime'])[0]; ?></span>
                 <a href="<?php echo $list[$i]['wr_2'] ?>" class="more">전문보기<svg width="19" height="7" viewBox="0 0 19 7" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 6H17L12.678 1" stroke="white" stroke-width="1.5"/></svg></a>
             </div>
         </li>

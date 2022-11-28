@@ -44,7 +44,7 @@ if (G5_IS_MOBILE) {
         <span class="sound_only">작성자 </span><?php echo $view['name'] ?>
         <!-- <span class="ip"><?php if ($is_ip_view) { echo "&nbsp;($ip)"; } ?></span> -->
         <span class="sound_only">작성일</span>
-        <span><?php echo date("Y-m-d H:i", strtotime($view['wr_datetime'])) ?></span>
+        <span><?php echo date("Y-m-d H:i", strtotime($view['wr_3'] == '' ? $view['wr_datetime'] : $view['wr_3'])) ?></span>
         <span class="sound_only">조회</span><strong><img src="<?php echo G5_IMG_URL ?>/view_icon.svg"> <?php echo number_format($view['wr_hit']) ?></strong>
         <!-- <span class="sound_only">댓글</span><strong><i class="fa fa-commenting-o" aria-hidden="true"></i> <?php echo number_format($view['wr_comment']) ?>건</strong> -->
     </section>   
