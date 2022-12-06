@@ -45,8 +45,8 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
                 </div>
                 <button>+</button>
                 </div>
-                <!-- <div class="lt_detail"><p> <?php echo get_text(cut_str(strip_tags($list[$i]['wr_content']), 100), 1); ?> -->
-                <div class="lt_detail"><p> <?php echo $list[$i]['wr_content'] ?>
+                <div class="lt_detail"><p> <?php echo get_text(cut_str(strip_tags($list[$i]['wr_content']), 100), 1); ?>
+                <!-- <div class="lt_detail"><p> <?php echo $list[$i]['wr_content'] ?> -->
                 </p><a href="<?php echo $list[$i]['wr_2'] ?>" class="more_mo mo">전문보기</a>
     </div>
                 </div>
