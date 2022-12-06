@@ -31,10 +31,21 @@ include_once(G5_THEME_MOBILE_PATH.'/head.php');
             <?php
             $sql = " select * from g5_write_investment where wr_is_comment = 0 order by wr_num desc limit 0, 3 ";        
             $result = sql_query($sql);
+            $now = strtotime(date("Y-m-d"));
             for ($i=0; $row = sql_fetch_array($result); $i++) {
-            ?>
+                $target_start = strtotime(date('Y-m-d', strtotime($row['wr_1'])));
+                $target_end = strtotime(date('Y-m-d', strtotime($row['wr_2'])));
+                ?>
                 <div class="swiper-slide slide_<?php echo $i+1 ?>">
-                    <p class="slide-name">모집중인 프로젝트</p>
+                    <p class="slide-name">
+                    <?php if($now < $target_start) { ?>
+                        오픈 예정 프로젝트
+                    <?php } else if($now > $target_end) { ?>
+                        모집 종료 프로젝트
+                    <?php } else if($now > $target_start && $now < $target_end) { ?>
+                        모집중인 프로젝트
+                    <?php } ?>
+                    </p>
                     <h3><?php echo $row['wr_subject'] ?></h3>
                     <p class="caption"><?php echo $row['wr_6'] ?></p>
                     <ul>

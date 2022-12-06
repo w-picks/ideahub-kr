@@ -35,9 +35,9 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
                 echo "<strong>";
                 if ($list[$i]['icon_secret']) echo "<i class=\"fa fa-lock\" aria-hidden=\"true\"></i><span class=\"sound_only\">비밀글</span> ";
                 if ($list[$i]['is_notice'])
-                    echo "<strong>".$list[$i]['subject']."</strong>";
+                    echo "<strong>".$list[$i]['wr_subject']."</strong>";
                 else
-                    echo $list[$i]['subject'];
+                    echo $list[$i]['wr_subject'];
 
                 echo "</strong>";
 

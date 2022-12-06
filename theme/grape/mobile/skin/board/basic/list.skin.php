@@ -324,7 +324,7 @@ if (G5_IS_MOBILE) {
                                 <?php }?> 
                                 <p>
                             <?php if (isset($list[$i]['icon_secret'])) echo $list[$i]['icon_secret'] ?>
-                            <?php echo $list[$i]['subject'] ?>
+                            <?php echo $list[$i]['wr_subject'] ?>
                             <?php
                             // if ($list[$i]['file']['count']) { echo '<'.$list[$i]['file']['count'].'>'; }
 
