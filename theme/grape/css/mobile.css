@@ -1070,7 +1070,7 @@ ul {
     min-width: 148px;
 }
 .lt_review .lt_rv_wr ul li .lt_wr .content {
-    width: 822px;
+    width: 805px;
 }
 .lt_review .lt_rv_wr ul li .lt_wr .content .content_tit {
     display: flex;
@@ -1081,7 +1081,11 @@ ul {
 }
 .lt_review .lt_rv_wr ul li .lt_wr .content .content_tit > div {
     width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
+
 .lt_review .lt_rv_wr ul li .lt_wr .content .content_tit strong {
     font-size: 20px;
     font-weight: normal;
@@ -1119,7 +1123,7 @@ ul {
 .lt_review .lt_rv_wr ul li .lt_wr .lt_date {
     font-size: 16px;
     color: #506285;
-    width: 72px;
+    width: 132px;
     display: block;
     flex-shrink: 0;
     text-align: right;
@@ -1129,7 +1133,8 @@ ul {
     flex-shrink: 0;
     color: #2d72db;
     font-weight: 700;
-    width: 72px;
+    width: 132px;
+    padding-left: 58px;
     display: none;
     justify-content: space-between;
     align-items: center;
@@ -2257,7 +2262,7 @@ ul {
         background: none;
     }
     .lt_review .lt_rv_wr ul li .lt_wr .content {
-        width: 100%;
+        width: calc(100% - 90px);
         margin-left: 0;
     }
     .lt_review .lt_rv_wr ul li .lt_wr .content .content_tit .lt_date {
@@ -2299,6 +2304,11 @@ ul {
         font-size: 14px;
         margin-top: 3px;
         display: block;
+        width: 100%;
+        display: block;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
     }
     .lt_review .lt_rv_wr ul li .lt_wr .content .content_tit > div {
         width: 100%;

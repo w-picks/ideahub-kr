@@ -552,7 +552,16 @@ white-space: nowrap;overflow-x: auto;
     align-items: center;
 }
 .board_list .bo_notice  {background:#F8F9FB}
-.board_list .bo_subject{font-size:18px;font-weight:500;display: flex; align-items: center;color:#040810}
+.board_list .bo_subject{font-size:18px;font-weight:500;display: flex; align-items: center;color:#040810; width:calc(100% - 263px)}
+.board_list a.bo_subject{
+    width: 100%;
+}
+.board_list a.bo_subject p{
+    width: 86%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 .board_list .bo_subject .notice_icon{width:76px;}
 .board_list .bo_subject .number{width:76px; color:#8496BA; font-size:16px; font-weight: normal;}
 .board_list .bo_cate_link{color:#ea185f;margin-bottom:10px;display:block}
@@ -570,11 +579,17 @@ white-space: nowrap;overflow-x: auto;
     align-items: center;
     font-size: 16px;
 }
+.board_list .bo_info .bo_date{
+    width:98px;
+}
 .board_list .bo_info .sv_member{color:#86909a;font-weight:normal}
 .board_list .bo_info .views{
     display: flex;
     align-items: center;
     margin-left:96px
+}
+.board_list .bo_info .views span{
+    width:30px;
 }
 .board_list .bo_info img{margin-right:6px;}
 .board_list .bo_info i{margin-left:5px}
@@ -1260,7 +1275,7 @@ box-shadow: 2px 2px 6px #f3f3f3}
   .lt_review .lt_rv_wr ul li .lt_wr .lt_date {
     font-size: 16px;
     color: #506285;
-    width: 72px;
+    width: 132px;
     display: block;
     flex-shrink: 0;
     text-align: right;

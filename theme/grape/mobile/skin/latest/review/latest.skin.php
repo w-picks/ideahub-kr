@@ -35,9 +35,9 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
                 echo "<strong>";
                 if ($list[$i]['icon_secret']) echo "<i class=\"fa fa-lock\" aria-hidden=\"true\"></i><span class=\"sound_only\">비밀글</span> ";
                 if ($list[$i]['is_notice'])
-                    echo "<strong>".$list[$i]['subject']."</strong>";
+                    echo "<strong>".$list[$i]['wr_subject']."</strong>";
                 else
-                    echo $list[$i]['subject'];
+                    echo $list[$i]['wr_subject'];
 
                 echo "</strong>";
 
@@ -46,6 +46,7 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
                 <button>+</button>
                 </div>
                 <div class="lt_detail"><p> <?php echo get_text(cut_str(strip_tags($list[$i]['wr_content']), 100), 1); ?>
+                <!-- <div class="lt_detail"><p> <?php echo $list[$i]['wr_content'] ?> -->
                 </p><a href="<?php echo $list[$i]['wr_2'] ?>" class="more_mo mo">전문보기</a>
     </div>
                 </div>
