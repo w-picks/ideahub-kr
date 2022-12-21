@@ -30,7 +30,7 @@
                         <p class="pop_name">Kyeongsu Im</p>
                         <p class="pop_detail">
                         KS is responsible for corporate management and investor relations at Ideahub. KS has over 20 years' experience in patent acquisition and monetization in the CE and Telecommunication industries.<br>
-                        KS started his career at the IP Center of LG Electronics and has worked for various intellectual property and licensing companies for over 27 years. During his career, he successfully completed more than 100 patent acquisiton deals and generated over $150M in patent licensing revenues.<br>
+                        KS started his career at the IP Center of LG Electronics and has worked for various intellectual property and licensing companies for over 27 years. During his career, he successfully completed more than 100 patent acquisition deals and generated over $150M in patent licensing revenues.<br>
                         He earned his bachelor of electrical engineering degree from Yonsei University and juris doctorate degree from Yonsei and George Washington University
                         </p>
                         <p class="pop_email">ks.im@ideahub.co.kr</p>
@@ -45,7 +45,7 @@
                         <p class="leader_name">Kyeongsu Im</p>
                     </div>
                     <div class="leader_noti">KS is responsible for corporate management and investor relations at Ideahub. KS has over 20 years' experience in patent acquisition and monetization in the CE and Telecommunication industries.<br>
-                    KS started his career at the IP Center of LG Electronics and has worked for various intellectual property and licensing companies for over 27 years. During his career, he successfully completed more than 100 patent acquisiton deals and generated over $150M in patent licensing revenues.<br>
+                    KS started his career at the IP Center of LG Electronics and has worked for various intellectual property and licensing companies for over 27 years. During his career, he successfully completed more than 100 patent acquisition deals and generated over $150M in patent licensing revenues.<br>
                     He earned his bachelor of electrical engineering degree from Yonsei University and juris doctorate degree from Yonsei and George Washington University</div>
                     <p class="leader_email">ks.im@ideahub.co.kr </p>
                 </li>
