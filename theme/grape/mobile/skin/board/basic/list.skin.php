@@ -188,7 +188,7 @@ if (G5_IS_MOBILE) {
                         $img_content = '<img src="'.$thumb['ori'].'" alt="'.$thumb['alt'].'" >';
                     } else {
                         // $img_content = '<span>no image</span>';
-                        $img_content = 'https://ideahub.co.kr/data/file/investment/3afe90a635dc971ef7659621b10817f2_vQiNTM1E_a736e1af83b2e44e99181d248d6a78561da7d94a.jpeg';
+                        $img_content = '<img src="https://ideahub.co.kr/data/file/investment/3afe90a635dc971ef7659621b10817f2_vQiNTM1E_a736e1af83b2e44e99181d248d6a78561da7d94a.jpeg" >';
                     }
                     echo $img_content;
                 ?>   
