@@ -183,6 +183,7 @@ if (G5_IS_MOBILE) {
                     $row = '';
                     $thumb = get_list_thumbnail($board['bo_table'], $list[$i]['wr_id'], "600", "226");
                     if($thumb['src']) {
+                        echo $img_content;
 
                         $img_content = '<img src="'.$thumb['ori'].'" alt="'.$thumb['alt'].'" >';
                     } else {
