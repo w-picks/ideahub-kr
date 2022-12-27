@@ -216,22 +216,22 @@ if (G5_IS_MOBILE) {
                         if($now < $target_start) {
                             $tab_tag = 1;
                         ?>
-                            <span class="funding_state disabled">펀딩예정</span>
+                            <span class="funding_state disabled" style="flex-shrink:0;">펀딩예정</span>
                         <?php     
                         } else if($now > $target_end) {
                             $tab_tag = 3;
                         ?>
-                            <span class="funding_state disabled">펀딩종료</span>
+                            <span class="funding_state disabled" style="flex-shrink:0;">펀딩종료</span>
                         <?php
                         } else if($success_tag == 1) {
                             $tab_tag = 2;
                         ?>
-                            <span class="funding_state success">펀딩성공</span>
+                            <span class="funding_state success" style="flex-shrink:0;">펀딩성공</span>
                         <?php
                         } else if($now > $target_start && $now < $target_end) {
                             $tab_tag = 2;
                         ?>
-                            <span class="funding_state ing">펀딩중</span>
+                            <span class="funding_state ing" style="flex-shrink:0;">펀딩중</span>
                         <?php
                         } 
                         ?>
@@ -580,7 +580,8 @@ function select_copy(sw) {
                 let nowAmount = document.querySelectorAll(".now_amount em");
                 let fundingAmount = document.querySelectorAll(".target_amount em");
                 let fundingPersentResult = (Number(nowAmount[i].innerText) / Number(fundingAmount[i].innerText)) * 100;
-                projectListLi.eq(i).find(".funding_content .persent em").html(fundingPersentResult);
+                projectListLi.eq(i).find(".funding_content .persent em").html((Math.round(fundingPersentResult * 100) / 100));
+                // projectListLi.eq(i).find(".funding_content .persent em").html(fundingPersentResult);
                 projectListLi.eq(i).find(".funding_state_bar .gauge").css({width : `${fundingPersentResult}%`})
 
                 nowAmount[i].innerHTML = Number(nowAmount[i].innerText).toLocaleString('ko-KR')
