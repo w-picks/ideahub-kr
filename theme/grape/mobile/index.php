@@ -133,7 +133,7 @@ include_once(G5_THEME_MOBILE_PATH.'/head.php');
                     <img src="<?php echo G5_IMG_URL ?>/investment_status_1.png">
                 </div>
                 <div class="img_box lg">
-                    <img src="<?php echo G5_IMG_URL ?>/investment_status_2.png">
+                    <img src="<?php echo G5_IMG_URL ?>/shack.jpeg">
                 </div>
                 <div class="img_box sm">
                     <img src="<?php echo G5_IMG_URL ?>/investment_status_3.png">
