@@ -251,12 +251,12 @@ echo latest('theme/review', 'broadcast', 5, 20);
         //              <img src="<?php echo G5_IMG_URL ?>/no_project_txt_mo.png" class="mo_img">
         //              <p>프로젝트 오픈 예정입니다!</p>
         //          </div>`)
+        // <p>회원가입을 하시면 투자 오픈 시 개별 안내 드립니다.</p>
+        //     </br>
+        //     <p>(기관투자자는 ideahub@ideahub.co.kr로 문의해주세요.)</p>
         $(".project_slide_bg .swiper-wrapper").html(`
         <div class="swiper-slide no-project">
             <p>2023년 상반기 중 투자프로젝트를 오픈 예정입니다.</p>
-            <p>회원가입을 하시면 투자 오픈 시 개별 안내 드립니다.</p>
-            </br>
-            <p>(기관투자자는 ideahub@ideahub.co.kr로 문의해주세요.)</p>
             <div class="slide_content_bg"></div>
         </div>`)
 
