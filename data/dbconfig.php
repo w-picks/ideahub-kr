@@ -2,7 +2,7 @@
 if (!defined('_GNUBOARD_')) exit;
 define('G5_MYSQL_HOST', '127.0.0.1');
 define('G5_MYSQL_USER', 'root');
-define('G5_MYSQL_PASSWORD', '1111');
+define('G5_MYSQL_PASSWORD', '11111111');
 define('G5_MYSQL_DB', 'bblog');
 define('G5_MYSQL_SET_MODE', true);
 
