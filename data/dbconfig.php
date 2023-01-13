@@ -1,6 +1,6 @@
 <?php
 if (!defined('_GNUBOARD_')) exit;
-define('G5_MYSQL_HOST', 'localhost');
+define('G5_MYSQL_HOST', '222.122.203.250');
 define('G5_MYSQL_USER', 'root');
 define('G5_MYSQL_PASSWORD', '11111111');
 define('G5_MYSQL_DB', 'bblog');
