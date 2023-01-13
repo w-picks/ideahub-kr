@@ -253,9 +253,12 @@ echo latest('theme/review', 'broadcast', 5, 20);
         //          </div>`)
         $(".project_slide_bg .swiper-wrapper").html(`
         <div class="swiper-slide no-project">
-        <p>현재 프로젝트를 준비중입니다.</p>
-                     <div class="slide_content_bg"></div>
-                 </div>`)
+            <p>2023년 상반기 중 투자프로젝트를 오픈 예정입니다.</p>
+            <p>회원가입을 하시면 투자 오픈 시 개별 안내 드립니다.</p>
+            </br>
+            <p>(기관투자자는 ideahub@ideahub.co.kr로 문의해주세요.)</p>
+            <div class="slide_content_bg"></div>
+        </div>`)
 
                  $(".swiper-btn").hide();
                  $(".swiper-pagination").hide();
